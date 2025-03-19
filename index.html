@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aghar Usman K T | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" aria-label="Main Navigation">
+    <div class="menu-toggle" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#home" onclick="loadSection('home')">Home</a></li>
+        <li><a href="#about" onclick="loadSection('about')">About</a></li>
+        <li><a href="#skills" onclick="loadSection('skills')">Tech Skills</a></li>
+        <li><a href="#projects" onclick="loadSection('projects')">Projects</a></li>
+        <li><a href="#achievements" onclick="loadSection('achievements')">Achievements</a></li>
+        <li><a href="#experience" onclick="loadSection('experience')">Experience</a></li>
+        <li><a href="#contact" onclick="loadSection('contact')">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="section hero">
+    <div class="hero-content">
+        <h1>🚀 Welcome to <span>Aghar Usman K T's</span> Universe</h1>
+        <p>Turning futuristic ideas into reality with technology.</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section about">
+    <div class="about-content">
+        <img src="../images/pp.jpg" alt="Aghar Usman Kannan Thodi" class="about-image">
+        <h2>About Me</h2>
+        <p>
+            👋 Hey there! I'm <strong>Aghar Usman K T</strong>, an aspiring tech innovator with a passion for building intelligent systems and futuristic designs.
+        </p>
+        <p>
+            Currently pursuing <strong>Information Science & Engineering</strong> at 
+            <strong>Malnad College of Engineering</strong>, I specialize in 
+            <strong>Artificial Intelligence, Web Development, and Data Science</strong>. 
+            I love crafting efficient, scalable solutions that bridge technology with real-world problems.
+        </p>
+        <p>
+            🔹 <strong>AI & Machine Learning Enthusiast</strong> – Exploring deep learning, NLP, and AI-powered applications.<br>
+            🔹 <strong>Full-Stack Web Developer</strong> – Creating dynamic and interactive user experiences.<br>
+            🔹 <strong>Data Science & Analytics</strong> – Passionate about uncovering insights from data.<br>
+        </p>
+        <p>
+            My goal is to contribute to cutting-edge tech that makes a difference. Whether it's AI-driven automation, immersive web experiences, or futuristic designs, I believe in the power of innovation.
+        </p>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" aria-labelledby="skills-title">
+    <h2 class="section-title" id="skills-title">Tech Skills</h2>
+
+    <div class="scroll-wrapper">
+        <!-- Previous Button with Image -->
+        <button id="prevBtn" class="scroll-btn" aria-label="Previous skill item">
+            <img src="images/prev-icon.png" alt="Previous">
+        </button>
+
+        <div class="scroll-content">
+            <!-- Programming Languages -->
+            <div class="skill-item">
+                <div class="skill-image python-icon"></div>
+                <span class="skill-name">Python</span>
+                <p class="skill-description">Versatile Programming Language</p>
+            </div>
+        
+            <div class="skill-item">
+                <div class="skill-image java-icon"></div>
+                <span class="skill-name">Java</span>
+                <p class="skill-description">Object-Oriented Programming</p>
+            </div>
+        
+            <!-- Web Development -->
+            <div class="skill-item">
+                <div class="skill-image html-icon"></div>
+                <span class="skill-name">HTML</span>
+                <p class="skill-description">Structure of Web Pages</p>
+            </div>
+        
+            <div class="skill-item">
+                <div class="skill-image css-icon"></div>
+                <span class="skill-name">CSS</span>
+                <p class="skill-description">Styling for Web Pages</p>
+            </div>
+        
+            <div class="skill-item">
+                <div class="skill-image js-icon"></div>
+                <span class="skill-name">JavaScript</span>
+                <p class="skill-description">Interactive Web Development</p>
+            </div>
+        
+            <!-- Data & AI -->
+            <div class="skill-item">
+                <div class="skill-image sql-icon"></div>
+                <span class="skill-name">SQL</span>
+                <p class="skill-description">Database Management</p>
+            </div>
+        
+            <div class="skill-item">
+                <div class="skill-image tensorflow-icon"></div>
+                <span class="skill-name">TensorFlow</span>
+                <p class="skill-description">Deep Learning Framework</p>
+            </div>
+        
+            <div class="skill-item">
+                <div class="skill-image pytorch-icon"></div>
+                <span class="skill-name">PyTorch</span>
+                <p class="skill-description">Machine Learning Framework</p>
+            </div>            
+        
+            <!-- Data Science-->
+            <div class="skill-item">
+                <div class="skill-image r-icon"></div>
+                <span class="skill-name">R</span>
+                <p class="skill-description">Statistical Computing & Visualization</p>
+            </div>
+        
+            <div class="skill-item">
+                <div class="skill-image powerbi-icon"></div>
+                <span class="skill-name">Power BI</span>
+                <p class="skill-description">Business Intelligence & Reporting</p>
+            </div>
+        
+            <div class="skill-item">
+                <div class="skill-image tableau-icon"></div>
+                <span class="skill-name">Tableau</span>
+                <p class="skill-description">Data Visualization & Dashboards</p>
+            </div>
+        
+            <!-- Tools-->
+            <div class="skill-item">
+                <div class="skill-image git-icon"></div>
+                <span class="skill-name">Git</span>
+                <p class="skill-description">Version Control System</p>
+            </div> 
+        
+            <div class="skill-item">
+                <div class="skill-image github-icon"></div>
+                <span class="skill-name">GitHub</span>
+                <p class="skill-description">Version Control & Collaboration</p>
+            </div>
+        </div>
+        
+        <!-- Next Button with Image -->
+        <button id="nextBtn" class="scroll-btn" aria-label="Next skill item">
+            <img src="images/next-icon.png" alt="Next">
+        </button>
+    </div>
+</section>
+
+
+
+    <!-- Projects Section -->
+<section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>📄 Question Paper Management System</h3>
+            <p>Role-based system for adding, updating, and managing question papers efficiently.</p>
+        </div>
+        <div class="project-card">
+            <h3>🎮 Strategic Multiplayer Game</h3>
+            <p>Connect4 & Tic-Tac-Toe with real-time gameplay via WebSocket.io.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Achievements Section -->
+<section id="achievements" class="section achievements">
+    <h2>Achievements 🏆</h2>
+    <ul>
+        <li>🥈 2nd place in a 6-hour State-Level Hackathon conducted by Team DevOps.</li>
+        <li>📄 Published research paper in the Journal of Technology.</li>
+    </ul>
+</section>
+
+<!-- Timeline Section -->
+<section id="Experience" class="section Eperience">
+    <h2>Experience ⏳</h2>
+    <ul>
+        <li>🎓 Bachelor's in Information Science & Engineering - Malnad College of Engineering (2021-2025)</li>
+        <li>💼 Internship at Prodigy Infotech - Data Visualization & EDA.</li>
+        <li>💻 Internship at Teragon EdTech - Web3.0 & Cloud Computing.</li>
+    </ul>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Aghar Usman K T. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://github.com/agharusman" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/agharusman" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="your_research_paper_link" target="_blank" rel="noopener">Research Paper</a>
+    </div>
+</footer>
+
+<!-- Load Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- Load Anime.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<!-- Load GSAP (Fix for Uncaught ReferenceError: gsap is not defined) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- Your Custom Scripts -->
+<script src="js/home.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/skills.js"></script>
+</body>
+</html>
