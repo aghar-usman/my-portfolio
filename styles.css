@@ -220,12 +220,13 @@ a:hover {
     width: 100%;
     height: 100%;
     z-index: 1; /* Three.js animation stays behind */
+    pointer-events: none; /* Prevents interaction issues */
 }
 
 /* HERO CONTENT */
 .hero-content {
-    max-width: 60%;
-    z-index: 2; /* Text stays above Three.js */
+    max-width: 80%;
+    z-index: 2;
     position: relative;
 }
 
@@ -285,30 +286,46 @@ a:hover {
     box-shadow: 0 0 50px rgba(74, 222, 128, 0.9), 0 0 90px rgba(56, 189, 248, 0.8);
 }
 
-/* FLOATING PARTICLE EFFECT */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none; /* Removes the particle image */
-    opacity: 0; /* Ensures no visibility */
-    z-index: -1; /* Moves it out of the way */
-    animation: none; /* Stops any existing animations */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 5%;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
 }
 
-@keyframes animateParticles {
-    from {
-        background-position: 0 0;
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
     }
-    to {
-        background-position: 150% 150%;
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 10px 25px;
     }
 }
-
-
 
 /* ================= ABOUT SECTION ================= */
 .about {
