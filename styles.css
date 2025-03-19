@@ -594,7 +594,7 @@ a:hover {
 }
 
 /* Individual Skill Icons */
-.python-icon { background-image: url('images/css.png'); }
+.python-icon { background-image: url('https://github.com/aghar-usman/aghar-portfolio/blob/main/images/python.png'); }
 .java-icon { background-image: url('images/java.png'); }
 .html-icon { background-image: url('images/html.png'); }
 .css-icon { background-image: url('images/css.png'); }
