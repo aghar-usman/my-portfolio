@@ -168,16 +168,14 @@ a:hover {
     }
 
     .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #010409;
-        width: 100vw;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        width: 100%;
+        height: 100vh; /* Makes it cover full screen */
+        top: 60px; /* Adjust based on navbar height */
         left: 0;
-        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
-        padding: 0;
+        background: rgba(1, 4, 9, 0.95); /* Semi-transparent */
+        flex-direction: column;
+        justify-content: center;
         transform: translateY(-100%);
         transition: transform 0.3s ease-in-out;
     }
@@ -185,7 +183,7 @@ a:hover {
     .nav-links.active {
         transform: translateY(0);
     }
-
+    
     .nav-links a {
         width: 100%;
         text-align: center;
@@ -266,7 +264,7 @@ a:hover {
 /* CTA BUTTON */
 .cta-button {
     background: linear-gradient(135deg, #4ade80, #38bdf8);
-    color: #0d1117;
+    color: #fff;
     padding: 14px 40px;
     border-radius: 30px;
     text-decoration: none;
@@ -280,7 +278,7 @@ a:hover {
 }
 
 .cta-button:hover {
-    background: #38bdf8;
+    background: #32a6e0;;
     color: #ffffff;
     transform: scale(1.12);
     box-shadow: 0 0 50px rgba(74, 222, 128, 0.9), 0 0 90px rgba(56, 189, 248, 0.8);
@@ -349,6 +347,8 @@ a:hover {
     .hero h1 {
         font-size: 2rem;
         line-height: 1.1;
+        text-shadow: 0 0 10px #4ade80, 0 0 20px rgba(74, 222, 128, 0.6);
+}
     }
 
     .hero p {
@@ -360,6 +360,7 @@ a:hover {
         padding: 12px 25px;
         width: 90%;
         text-align: center;
+        
     }
 }
 
