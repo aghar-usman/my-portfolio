@@ -561,6 +561,8 @@ a:hover {
     margin: 60px 0;
     text-align: center;
     position: relative;
+    border-radius: 30px;
+    box-shadow: 0 6px 35px rgba(0, 247, 255, 0.2);
 }
 
 .section-title {
