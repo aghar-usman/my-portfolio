@@ -574,6 +574,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 /* Scroll Container */
@@ -588,6 +589,12 @@ a:hover {
     border-bottom: 2px solid #38bdf8;
     scroll-behavior: smooth;
     max-width: 900px;
+    white-space: nowrap; /* Ensures items stay in one row */
+}
+
+/* Hide scrollbar */
+.scroll-container::-webkit-scrollbar {
+    display: none;
 }
 
 /* Scroll Buttons */
@@ -672,6 +679,19 @@ a:hover {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 10px;
+}
+
+/* Skill Description */
+.skill-description {
+    color: #ffffff; /* Set to white */
+    font-size: 0.9rem;
+    margin-top: 8px;
+    text-align: center;
+    line-height: 1.4;
+    padding: 5px;
+    flex-grow: 1;
+    max-height: 80px;
+    overflow: hidden;
 }
 
 /* Skill Icons */
