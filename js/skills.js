@@ -4,40 +4,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!scrollContainer || !scrollContent) return;
 
-    let scrollSpeed = 10; // Auto-scrolling speed
+    let scrollSpeed = 1; // Adjust speed as needed
     let isPaused = false;
-    let animationFrame;
-    let isCloned = false; // Prevents multiple cloning
 
-    // Function to duplicate skill items for seamless infinite scrolling
+    // Duplicate items for seamless scrolling
     function duplicateItems() {
-        if (isCloned) return;
-        const skills = Array.from(scrollContent.children);
-        skills.forEach((skill) => {
-            const clone = skill.cloneNode(true);
+        const items = [...scrollContent.children];
+        items.forEach((item) => {
+            let clone = item.cloneNode(true);
             scrollContent.appendChild(clone);
         });
-        isCloned = true;
     }
+    duplicateItems();
 
-    duplicateItems(); // Clone items once
-
-    // Function for automatic infinite scrolling
+    // Start scrolling function
     function scrollSkills() {
         if (!isPaused) {
             scrollContainer.scrollLeft += scrollSpeed;
 
-            // Reset scroll position for seamless looping
+            // Reset scroll when first half is scrolled completely
             if (scrollContainer.scrollLeft >= scrollContent.scrollWidth / 2) {
                 scrollContainer.scrollLeft = 0;
             }
         }
-        animationFrame = requestAnimationFrame(scrollSkills);
+        requestAnimationFrame(scrollSkills);
     }
 
-    scrollSkills(); // Start infinite auto-scrolling
+    scrollSkills(); // Start scrolling
 
-    // Pause auto-scroll on hover
+    // Pause on hover
     scrollContainer.addEventListener("mouseenter", () => (isPaused = true));
     scrollContainer.addEventListener("mouseleave", () => (isPaused = false));
 });
