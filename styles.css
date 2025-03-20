@@ -392,13 +392,38 @@ a:hover {
     box-shadow: 0 6px 35px rgba(0, 247, 255, 0.2);
 }
 
+/* Background Overlay - Subtle Circuit Effect */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/circuitboard.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.15;
+    filter: brightness(30%) blur(2px);
+    animation: driftGlow 12s infinite linear alternate;
+    z-index: 0;
+}
+
+/* Animated Background Glow */
+@keyframes driftGlow {
+    0% { transform: translateX(0px) translateY(0px); opacity: 0.08; }
+    50% { transform: translateX(10px) translateY(-10px); opacity: 0.12; }
+    100% { transform: translateX(-10px) translateY(10px); opacity: 0.08; }
+}
+
 /* Profile Image */
 .about-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     border-radius: 50%;
     box-shadow: 0 0 50px rgba(56, 189, 248, 0.8), 0 0 80px rgba(0, 247, 255, 0.6);
     border: 2px solid rgba(56, 189, 248, 0.7);
@@ -421,47 +446,19 @@ a:hover {
 
 /* Hover Effect */
 .about-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 80px rgba(56, 189, 248, 1), 0 0 120px rgba(0, 247, 255, 1);
-}
-
-/* Background Overlay */
-.about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/circuitboard.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.2;
-    filter: brightness(30%) blur(2px);
-    animation: driftGlow 12s infinite linear alternate;
-    z-index: 0;
-}
-
-/* Animated Background Glow */
-@keyframes driftGlow {
-    0% { transform: translateX(0px) translateY(0px); opacity: 0.08; }
-    50% { transform: translateX(10px) translateY(-10px); opacity: 0.12; }
-    100% { transform: translateX(-10px) translateY(10px); opacity: 0.08; }
+    transform: scale(1.08);
+    box-shadow: 0 0 90px rgba(56, 189, 248, 1), 0 0 140px rgba(0, 247, 255, 1);
 }
 
 /* Section Title */
 .about h2 {
     color: #00f7ff;
-    font-size: 3.5rem;
-    margin-bottom: 24px;
+    font-size: 3.8rem;
+    margin-bottom: 25px;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
-    text-shadow: none;
-    background: none;
-    padding: 0;
-    border: none;
-    box-shadow: none;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.8);
     position: relative;
     z-index: 2;
 }
@@ -469,7 +466,7 @@ a:hover {
 /* About Description */
 .about p {
     color: #e5e7eb;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 2;
     max-width: 850px;
     margin: 0 auto 50px;
@@ -483,12 +480,12 @@ a:hover {
     display: inline-block;
     background: linear-gradient(135deg, #3b82f6, #4ade80);
     color: #010409;
-    padding: 14px 32px;
+    padding: 15px 36px;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 0 25px #3b82f6, 0 0 50px #4ade80;
+    font-size: 1.3rem;
+    box-shadow: 0 0 30px #3b82f6, 0 0 60px #4ade80;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     position: relative;
     z-index: 2;
@@ -496,19 +493,19 @@ a:hover {
 
 /* Hover Effect for CTA */
 .about .cta-button:hover {
-    transform: translateY(-5px) scale(1.07);
+    transform: translateY(-5px) scale(1.1);
     background: linear-gradient(135deg, #4ade80, #ff00ff);
     box-shadow: 0 0 50px #4ade80, 0 0 100px #ff00ff;
 }
 
-/* Responsive Adjustments */
+/* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 768px) {
     .about {
         padding: 70px 6%;
     }
 
     .about h2 {
-        font-size: 2.7rem;
+        font-size: 3rem;
     }
 
     .about p {
@@ -517,12 +514,13 @@ a:hover {
     }
 
     .about .cta-button {
-        padding: 12px 28px;
-        font-size: 1.1rem;
-        box-shadow: 0 0 15px #3b82f6, 0 0 30px #4ade80;
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        box-shadow: 0 0 20px #3b82f6, 0 0 40px #4ade80;
     }
 
     .about-image {
+        max-width: 250px;
         box-shadow: 0 0 30px rgba(56, 189, 248, 0.6), 0 0 50px rgba(0, 247, 255, 0.4);
     }
 }
@@ -533,25 +531,27 @@ a:hover {
     }
 
     .about h2 {
-        font-size: 2.3rem;
-        margin-bottom: 18px;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
     }
 
     .about p {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         line-height: 1.6;
     }
 
     .about .cta-button {
-        padding: 10px 24px;
+        padding: 10px 25px;
         font-size: 1rem;
-        box-shadow: 0 0 10px #3b82f6, 0 0 20px #4ade80;
+        box-shadow: 0 0 15px #3b82f6, 0 0 30px #4ade80;
     }
 
     .about-image {
-        box-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 35px rgba(0, 247, 255, 0.3);
+        max-width: 220px;
+        box-shadow: 0 0 25px rgba(56, 189, 248, 0.5), 0 0 40px rgba(0, 247, 255, 0.3);
     }
 }
+
 
 /*=================== Tech Skills Section ===================*/
 .skills-section {
