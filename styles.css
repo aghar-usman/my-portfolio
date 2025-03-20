@@ -388,8 +388,6 @@ a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 0 6px 35px rgba(0, 247, 255, 0.2);
 }
 
 /* Profile Image */
