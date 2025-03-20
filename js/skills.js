@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             scrollContainer.scrollLeft -= scrollStep;
         }
 
-        // Show/Hide buttons on hover
+        // Pause auto-scroll on hover
         scrollWrapper.addEventListener("mouseenter", () => (isPaused = true));
         scrollWrapper.addEventListener("mouseleave", () => {
             isPaused = false;
@@ -62,23 +62,5 @@ document.addEventListener("DOMContentLoaded", function () {
         // Attach event listeners to buttons
         nextButton.addEventListener("click", scrollNext);
         prevButton.addEventListener("click", scrollPrev);
-
-        // Hide buttons initially
-        nextButton.style.display = "none";
-        prevButton.style.display = "none";
-
-        // Show buttons on hover
-        scrollWrapper.addEventListener("mouseenter", () => {
-            nextButton.style.display = "flex";
-            prevButton.style.display = "flex";
-        });
-
-        // Hide buttons after a delay when not hovered
-        scrollWrapper.addEventListener("mouseleave", () => {
-            setTimeout(() => {
-                nextButton.style.display = "none";
-                prevButton.style.display = "none";
-            }, 1000);
-        });
     }
 });
