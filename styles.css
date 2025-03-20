@@ -398,6 +398,7 @@ a:hover {
     max-width: 300px;
     display: block;
     margin: 0 auto;
+    margin-bottom: 80px;
     border-radius: 50%;
     box-shadow: 0 0 50px rgba(56, 189, 248, 0.8), 0 0 80px rgba(0, 247, 255, 0.6);
     border: 2px solid rgba(56, 189, 248, 0.7);
