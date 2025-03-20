@@ -555,24 +555,24 @@ a:hover {
 
 /*=================== Tech Skills Section ===================*/
 .skills-section {
-    background: radial-gradient(circle, rgba(15, 23, 42, 1) 20%, #0f172a 100%); /* Gradient background */
-    padding: 80px 40px;
-    margin: 60px 0;
+    background: radial-gradient(circle, rgba(15, 23, 42, 1) 20%, #0f172a 100%);
+    padding: 100px 60px;
+    margin: 80px 0;
     text-align: center;
     position: relative;
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 6px 35px rgba(0, 247, 255, 0.2); /* Glowing shadow */
-    overflow: hidden; /* Ensures child elements respect border-radius */
+    border-radius: 35px;
+    box-shadow: 0 8px 40px rgba(0, 247, 255, 0.25);
+    overflow: hidden;
 }
 
 .section-title {
     color: #38bdf8;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    margin-bottom: 50px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
-    text-align: center;
+    letter-spacing: 2.5px;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.9);
+    animation: fadeInDown 1s ease-in-out;
 }
 
 /* Scroll Wrapper */
@@ -582,21 +582,21 @@ a:hover {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
 }
 
 /* Scroll Container */
 .scroll-container {
-    width: 100%;
-    overflow: hidden;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding: 20px 0;
-    border-top: 2px solid #38bdf8;
-    border-bottom: 2px solid #38bdf8;
+    overflow-x: auto;
     scroll-behavior: smooth;
-    max-width: 900px;
+    max-width: 1100px;
     white-space: nowrap;
+    position: relative;
+    scrollbar-width: none; /* Works in Firefox */
 }
 
 /* Hide scrollbar */
@@ -604,116 +604,82 @@ a:hover {
     display: none;
 }
 
-/* Scroll Buttons */
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #1e293b;
-    border: none;
-    border-radius: 50%;
-    padding: 12px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
-    transition: background 0.3s, transform 0.2s, opacity 0.3s, visibility 0.3s;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.scroll-btn img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
-}
-
-.scroll-btn:hover {
-    background: #38bdf8;
-    transform: scale(1.1) translateY(-50%);
-    box-shadow: 0 0 15px #38bdf8;
-}
-
-.scroll-btn:active {
-    transform: scale(0.95) translateY(-50%);
-}
-
-.scroll-prev {
-    left: -60px; /* Positioned outside the container */
-}
-
-.scroll-next {
-    right: -60px; /* Positioned outside the container */
-}
-
-/* Show buttons on hover */
-.scroll-wrapper:hover .scroll-btn {
-    opacity: 1;
-    visibility: visible;
-}
-
 /* Scroll Content */
 .scroll-content {
     display: flex;
-    gap: 20px;
-    will-change: transform;
+    gap: 25px;
     width: max-content;
+    padding: 10px 0; /* Add padding for better spacing */
 }
 
 /* Skill Item */
 .skill-item {
+    width: 250px; /* Fixed width */
+    min-height: 250px; /* Fixed height */
     background-color: #1e293b;
-    border-radius: 15px;
-    padding: 25px;
-    width: 180px;
+    border-radius: 20px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 6px 25px rgba(0, 255, 255, 0.35);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    min-height: 200px;
+    flex-shrink: 0; /* Prevent shrinking */
+    animation: fadeInUp 0.8s ease-in-out;
 }
 
 .skill-item:hover {
     background: linear-gradient(135deg, #3b82f6, #4ade80);
-    box-shadow: 0 0 30px #4ade80, 0 0 60px #4ade80;
-    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 0 40px rgba(74, 222, 128, 0.7), 0 0 80px rgba(74, 222, 128, 0.5);
+    transform: translateY(-10px) scale(1.05);
 }
 
 .skill-name {
     color: #e2e8f0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.skill-item:hover .skill-name {
+    color: #ffffff;
 }
 
 .skill-description {
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: center;
-    line-height: 1.4;
-    padding: 5px;
+    line-height: 1.6;
+    padding: 8px;
     flex-grow: 1;
-    max-height: 50px;
+    max-height: 60px; /* Limit description height */
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limits to 2 lines */
+    -webkit-line-clamp: 2; /* Show only 2 lines */
     -webkit-box-orient: vertical;
+    transition: color 0.3s ease-in-out;
 }
 
+.skill-item:hover .skill-description {
+    color: #e2e8f0;
+}
 
 /* Skill Icons */
 .skill-image {
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     background-size: contain;
     background-repeat: no-repeat;
+    flex-shrink: 0; /* Prevent shrinking */
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-item:hover .skill-image {
+    transform: scale(1.1);
 }
 
 /* Individual Skill Icons */
@@ -731,22 +697,63 @@ a:hover {
 .git-icon { background-image: url('images/git.png'); }
 .github-icon { background-image: url('images/github.gif'); }
 
-
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .scroll-container {
+        max-width: 90%;
+    }
+    .skill-item {
+        width: 180px;
+        padding: 25px;
+        min-height: 200px;
+    }
+}
+
 @media (max-width: 768px) {
     .scroll-container {
-        width: 90%;
+        max-width: 95%;
     }
     .skill-item {
         width: 160px;
         padding: 20px;
         min-height: 180px;
     }
-    .scroll-prev {
-        left: -40px;
+}
+
+@media (max-width: 480px) {
+    .scroll-container {
+        max-width: 100%;
     }
-    .scroll-next {
-        right: -40px;
+    .skill-item {
+        width: 140px;
+        padding: 15px;
+        min-height: 160px;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
