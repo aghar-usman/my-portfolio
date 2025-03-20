@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!scrollContainer || !scrollContent) return;
 
-    let scrollSpeed = 1.25; // Auto-scrolling speed
+    let scrollSpeed = 10; // Auto-scrolling speed
     let isPaused = false;
     let animationFrame;
     let isCloned = false; // Prevents multiple cloning
