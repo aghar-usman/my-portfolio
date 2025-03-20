@@ -1,66 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".scroll-content");
-    const scrollWrapper = document.querySelector(".scroll-wrapper");
-    const nextButton = document.querySelector(".scroll-next");
-    const prevButton = document.querySelector(".scroll-prev");
+    const scrollContainer = document.querySelector(".scroll-container");
+    const scrollContent = document.querySelector(".scroll-content");
 
-    if (scrollContainer) {
-        let scrollSpeed = 1.2; // Adjust speed for auto-scrolling
-        let scrollStep = 200; // Step size for Next/Prev buttons
-        let isPaused = false;
-        let animationFrame;
+    if (!scrollContainer || !scrollContent) return;
 
-        // Duplicate elements for infinite loop effect
-        function duplicateItems() {
-            const skills = Array.from(scrollContainer.children);
-            skills.forEach((skill) => {
-                const clone = skill.cloneNode(true);
-                scrollContainer.appendChild(clone);
-            });
-        }
+    let scrollSpeed = 1.5; // Auto-scrolling speed
+    let isPaused = false;
+    let animationFrame;
+    let isCloned = false; // Prevents multiple cloning
 
-        duplicateItems(); // Call function to duplicate skills
+    // Function to duplicate skill items for seamless infinite scrolling
+    function duplicateItems() {
+        if (isCloned) return;
+        const skills = Array.from(scrollContent.children);
+        skills.forEach((skill) => {
+            const clone = skill.cloneNode(true);
+            scrollContent.appendChild(clone);
+        });
+        isCloned = true;
+    }
 
-        // Auto-scroll function
-        function scrollSkills() {
-            if (!isPaused) {
-                scrollContainer.scrollLeft += scrollSpeed;
+    duplicateItems(); // Clone items once
 
-                // Reset scroll position for seamless looping
-                if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-                    scrollContainer.scrollLeft = 0;
-                }
-            }
-            animationFrame = requestAnimationFrame(scrollSkills);
-        }
+    // Function for automatic infinite scrolling
+    function scrollSkills() {
+        if (!isPaused) {
+            scrollContainer.scrollLeft += scrollSpeed;
 
-        scrollSkills(); // Start infinite scrolling
-
-        // Function to move to the next skill with seamless transition
-        function scrollNext() {
-            scrollContainer.scrollLeft += scrollStep;
-            if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+            // Reset scroll position for seamless looping
+            if (scrollContainer.scrollLeft >= scrollContent.scrollWidth / 2) {
                 scrollContainer.scrollLeft = 0;
             }
         }
-
-        // Function to move to the previous skill with seamless transition
-        function scrollPrev() {
-            if (scrollContainer.scrollLeft === 0) {
-                scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
-            }
-            scrollContainer.scrollLeft -= scrollStep;
-        }
-
-        // Pause auto-scroll on hover
-        scrollWrapper.addEventListener("mouseenter", () => (isPaused = true));
-        scrollWrapper.addEventListener("mouseleave", () => {
-            isPaused = false;
-            scrollSkills();
-        });
-
-        // Attach event listeners to buttons
-        nextButton.addEventListener("click", scrollNext);
-        prevButton.addEventListener("click", scrollPrev);
+        animationFrame = requestAnimationFrame(scrollSkills);
     }
+
+    scrollSkills(); // Start infinite auto-scrolling
+
+    // Pause auto-scroll on hover
+    scrollContainer.addEventListener("mouseenter", () => (isPaused = true));
+    scrollContainer.addEventListener("mouseleave", () => (isPaused = false));
 });
