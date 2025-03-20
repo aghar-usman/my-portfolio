@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
             scrollContainer.appendChild(clone);
         });
 
-        let scrollAmount = 0;
         let scrollSpeed = 1; // Adjust speed for auto-scrolling
-        let scrollStep = 60; // Adjust step size for Next/Prev buttons
+        let scrollStep = 80; // Adjust step size for Next/Prev buttons
         let isPaused = true; // Start in paused mode
         let animationFrame;
         let hideTimeout;
 
-        // Function to enable smooth auto-scrolling
+        // Auto-scrolling function
         function scrollSkills() {
             if (!isPaused) {
                 scrollContainer.scrollLeft += scrollSpeed;
