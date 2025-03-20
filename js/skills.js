@@ -1,72 +1,76 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const scrollContainer = document.querySelector('.scroll-content');
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollContainer = document.querySelector(".scroll-content");
+    const scrollWrapper = document.querySelector(".scroll-wrapper");
+    const nextButton = document.querySelector(".scroll-next");
+    const prevButton = document.querySelector(".scroll-prev");
+
     if (scrollContainer) {
         const skills = Array.from(scrollContainer.children);
 
-        // Duplicate skills for seamless circular effect
-        skills.forEach(skill => {
+        // Duplicate elements for seamless scrolling effect
+        skills.forEach((skill) => {
             const clone = skill.cloneNode(true);
             scrollContainer.appendChild(clone);
         });
 
-        // Ensure smooth scrolling
         let scrollAmount = 0;
-        let scrollSpeed = 1; // Adjusted speed for smoother scroll
-        let scrollStep = 10; // The number of pixels to scroll for next/prev buttons
-        let isPaused = false;
+        let scrollSpeed = 1; // Adjust speed for smoother scrolling
+        let scrollStep = 60; // Adjust step size for Next/Prev buttons
+        let isPaused = true; // Start in paused mode until hover
+        let animationFrame;
 
-        // Set smooth transition for scrolling
-        scrollContainer.style.transition = "transform 0.1s ease"; // Add smooth scrolling transition
-
+        // Function to enable smooth auto-scrolling
         function scrollSkills() {
             if (!isPaused) {
                 scrollAmount += scrollSpeed;
 
                 // Seamless looping logic
                 if (scrollAmount >= scrollContainer.scrollWidth / 2) {
-                    scrollAmount = 0; // Reset scroll position for seamless loop
+                    scrollAmount = 0; // Reset scroll position for a smooth loop
                 }
 
-                // Apply the transform property for smooth scroll
                 scrollContainer.style.transform = `translateX(-${scrollAmount}px)`;
             }
 
-            requestAnimationFrame(scrollSkills);
+            animationFrame = requestAnimationFrame(scrollSkills);
         }
 
-        scrollSkills();
-
-        // Pause scrolling when hovering for better UX
-        scrollContainer.addEventListener('mouseenter', () => {
-            isPaused = true; // Pause scrolling on hover
+        // Start scrolling when hovered
+        scrollWrapper.addEventListener("mouseenter", () => {
+            isPaused = false;
+            scrollSkills();
+            nextButton.style.display = "flex"; // Show buttons
+            prevButton.style.display = "flex";
         });
 
-        scrollContainer.addEventListener('mouseleave', () => {
-            isPaused = false; // Resume scrolling when hover ends
+        // Pause scrolling when mouse leaves
+        scrollWrapper.addEventListener("mouseleave", () => {
+            isPaused = true;
+            cancelAnimationFrame(animationFrame);
+            nextButton.style.display = "none"; // Hide buttons
+            prevButton.style.display = "none";
         });
 
-        // Next and Previous button controls for fast forward and rewind
-        const nextButton = document.querySelector('.scroll-next');
-        const prevButton = document.querySelector('.scroll-prev');
+        // Next Button Click Event
+        nextButton.addEventListener("click", () => {
+            scrollAmount += scrollStep;
+            if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+                scrollAmount = 0; // Seamless reset when reaching the end
+            }
+            scrollContainer.style.transform = `translateX(-${scrollAmount}px)`;
+        });
 
-        if (nextButton) {
-            nextButton.addEventListener('click', () => {
-                scrollAmount += scrollStep;
-                if (scrollAmount >= scrollContainer.scrollWidth / 2) {
-                    scrollAmount = 0; // Seamless reset when reaching the end
-                }
-                scrollContainer.style.transform = `translateX(-${scrollAmount}px)`;
-            });
-        }
+        // Previous Button Click Event
+        prevButton.addEventListener("click", () => {
+            scrollAmount -= scrollStep;
+            if (scrollAmount < 0) {
+                scrollAmount = scrollContainer.scrollWidth / 2 - scrollStep; // Seamless reset at start
+            }
+            scrollContainer.style.transform = `translateX(-${scrollAmount}px)`;
+        });
 
-        if (prevButton) {
-            prevButton.addEventListener('click', () => {
-                scrollAmount -= scrollStep;
-                if (scrollAmount < 0) {
-                    scrollAmount = scrollContainer.scrollWidth / 2 - scrollStep; // Seamless reset on reaching start
-                }
-                scrollContainer.style.transform = `translateX(-${scrollAmount}px)`;
-            });
-        }
+        // Hide buttons initially
+        nextButton.style.display = "none";
+        prevButton.style.display = "none";
     }
 });
