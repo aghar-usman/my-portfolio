@@ -555,13 +555,14 @@ a:hover {
 
 /*=================== Tech Skills Section ===================*/
 .skills-section {
-    background-color: #0f172a;
+    background: radial-gradient(circle, rgba(15, 23, 42, 1) 20%, #0f172a 100%); /* Gradient background */
     padding: 80px 40px;
     margin: 60px 0;
     text-align: center;
     position: relative;
-    border-radius: 30px;
-    box-shadow: 0 6px 35px rgba(0, 247, 255, 0.2);
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 6px 35px rgba(0, 247, 255, 0.2); /* Glowing shadow */
+    overflow: hidden; /* Ensures child elements respect border-radius */
 }
 
 .section-title {
