@@ -692,18 +692,21 @@ a:hover {
     margin-top: 10px;
 }
 
-/* Skill Description */
 .skill-description {
     color: #ffffff;
     font-size: 0.9rem;
-    margin-top: 8px;
     text-align: center;
     line-height: 1.4;
     padding: 5px;
     flex-grow: 1;
-    max-height: 80px;
+    max-height: 50px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits to 2 lines */
+    -webkit-box-orient: vertical;
 }
+
 
 /* Skill Icons */
 .skill-image {
@@ -728,6 +731,7 @@ a:hover {
 .git-icon { background-image: url('images/git.png'); }
 .github-icon { background-image: url('images/github.gif'); }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .scroll-container {
@@ -745,7 +749,6 @@ a:hover {
         right: -40px;
     }
 }
-
 
 /* ================= PROJECTS SECTION ================= */
 .projects {
