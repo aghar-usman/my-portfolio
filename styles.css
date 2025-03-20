@@ -550,163 +550,169 @@ a:hover {
 }
 
 
-/* Skills Section */
+/*=================== Tech Skills Section ===================*/
 .skills-section {
-    width: 100%;
-    padding: 40px 0;
-    background: #0a0a1a; /* Dark theme background */
+    background-color: #0f172a;
+    padding: 80px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 255, 255, 0.3);
+    margin: 60px 0;
     text-align: center;
+    position: relative;
 }
 
-/* Title Styling */
-.skills-title {
-    font-size: 2rem;
-    color: #00ffff;
+.section-title {
+    color: #38bdf8;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
     text-transform: uppercase;
-    margin-bottom: 20px;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px #00ffff;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
 }
 
 /* Scroll Wrapper */
 .scroll-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    background: rgba(10, 10, 30, 0.8);
+}
+
+/* Scroll Container */
+.scroll-container {
+    width: 100%;
+    overflow: hidden; /* Hides the scrollbar */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 20px 0;
+    border-top: 2px solid #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+    scroll-behavior: smooth;
+    max-width: 900px;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #1e293b;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+    transition: background 0.3s, transform 0.2s;
+    display: none; /* Initially hidden */
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-btn img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.scroll-btn:hover {
+    background: #38bdf8;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+.scroll-btn:active {
+    transform: scale(0.95);
+}
+
+.scroll-prev {
+    left: -60px; /* Adjusted for better positioning */
+}
+.scroll-next {
+    right: -60px; /* Adjusted for better positioning */
+}
+
+/* Show buttons only when necessary */
+.scroll-wrapper:hover .scroll-btn {
+    display: flex;
 }
 
 /* Scroll Content */
 .scroll-content {
     display: flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    gap: 20px;
+    will-change: transform;
     width: max-content;
-    animation: scrollLoop 15s linear infinite;
 }
 
-/* Scroll Items (Cards) */
-.skill-card {
-    min-width: 200px;
-    height: 180px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
+/* Skill Item */
+.skill-item {
+    background-color: #1e293b;
+    border-radius: 15px;
+    padding: 25px;
+    width: 180px;
     text-align: center;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease-in-out;
+    justify-content: space-between;
+    min-height: 200px;
 }
 
-.skill-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+.skill-item:hover {
+    background: linear-gradient(135deg, #3b82f6, #4ade80);
+    box-shadow: 0 0 30px #4ade80, 0 0 60px #4ade80;
+    transform: translateY(-8px) scale(1.08);
 }
 
-.skill-card h3 {
-    color: #00ffff;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+.skill-name {
+    color: #e2e8f0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.skill-card p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+/* Skill Icons */
+.skill-image {
+    height: 70px;
+    width: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-/* Hover Effect */
-.skill-card:hover {
-    transform: scale(1.1);
-    background: rgba(0, 255, 255, 0.2);
-}
-
-/* Hide the scrollbar */
-.scroll-content::-webkit-scrollbar {
-    display: none;
-}
-
-/* Next/Prev Buttons */
-.scroll-next, .scroll-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 45px;
-    height: 45px;
-    background: rgba(0, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-.scroll-next:hover, .scroll-prev:hover {
-    background: rgba(0, 255, 255, 0.6);
-}
-
-.scroll-next {
-    right: -20px;
-}
-
-.scroll-prev {
-    left: -20px;
-}
-
-/* Infinite Scrolling Animation */
-@keyframes scrollLoop {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
+/* Individual Skill Icons */
+.python-icon { background-image: url('images/python.png'); }
+.java-icon { background-image: url('images/java.png'); }
+.html-icon { background-image: url('images/html.png'); }
+.css-icon { background-image: url('images/css.png'); }
+.js-icon { background-image: url('images/js.png'); }
+.sql-icon { background-image: url('images/sql.png'); }
+.tensorflow-icon { background-image: url('images/tensorflow.png'); }
+.pytorch-icon { background-image: url('images/pytorch.png'); }
+.r-icon { background-image: url('images/r.png'); }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .scroll-wrapper {
-        width: 95%;
+    .scroll-container {
+        width: 90%;
     }
-
-    .skill-card {
-        min-width: 150px;
-        height: 160px;
-        padding: 10px;
+    .skill-item {
+        width: 160px;
+        padding: 20px;
+        min-height: 180px;
     }
-
-    .skill-card h3 {
-        font-size: 1rem;
-    }
-
-    .skill-card p {
-        font-size: 0.8rem;
-    }
-
-    .scroll-next, .scroll-prev {
-        width: 40px;
-        height: 40px;
-    }
-
-    .scroll-next {
-        right: 5px;
-    }
-
     .scroll-prev {
-        left: 5px;
+        left: -40px; /* Adjusted for smaller screens */
+    }
+    .scroll-next {
+        right: -40px;
     }
 }
+
 
 /* ================= PROJECTS SECTION ================= */
 .projects {
