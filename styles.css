@@ -456,15 +456,14 @@ a:hover {
     margin-bottom: 24px;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
-    text-shadow: none; /* Removes the glowing effect */
-    background: none; /* Ensures no background color */
-    padding: 0; /* Removes any padding */
-    border: none; /* Ensures no border */
-    box-shadow: none; /* Removes any box shadow */
+    text-shadow: none;
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
     position: relative;
     z-index: 2;
 }
-
 
 /* About Description */
 .about p {
@@ -519,11 +518,11 @@ a:hover {
     .about .cta-button {
         padding: 12px 28px;
         font-size: 1.1rem;
-        box-shadow: 0 0 15px #3b82f6, 0 0 30px #4ade80; /* Reduced glow */
+        box-shadow: 0 0 15px #3b82f6, 0 0 30px #4ade80;
     }
 
     .about-image {
-        box-shadow: 0 0 30px rgba(56, 189, 248, 0.6), 0 0 50px rgba(0, 247, 255, 0.4); /* Reduced glow */
+        box-shadow: 0 0 30px rgba(56, 189, 248, 0.6), 0 0 50px rgba(0, 247, 255, 0.4);
     }
 }
 
@@ -545,14 +544,13 @@ a:hover {
     .about .cta-button {
         padding: 10px 24px;
         font-size: 1rem;
-        box-shadow: 0 0 10px #3b82f6, 0 0 20px #4ade80; /* Further reduced glow */
+        box-shadow: 0 0 10px #3b82f6, 0 0 20px #4ade80;
     }
 
     .about-image {
-        box-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 35px rgba(0, 247, 255, 0.3); /* Further reduced glow */
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 35px rgba(0, 247, 255, 0.3);
     }
 }
-
 
 /*=================== Tech Skills Section ===================*/
 .skills-section {
@@ -572,7 +570,7 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
-    text-align: center; /* Centers the text */
+    text-align: center;
 }
 
 /* Scroll Wrapper */
@@ -587,7 +585,7 @@ a:hover {
 /* Scroll Container */
 .scroll-container {
     width: 100%;
-    overflow: hidden; /* Hides the scrollbar */
+    overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -596,7 +594,7 @@ a:hover {
     border-bottom: 2px solid #38bdf8;
     scroll-behavior: smooth;
     max-width: 900px;
-    white-space: nowrap; /* Ensures items stay in one row */
+    white-space: nowrap;
 }
 
 /* Hide scrollbar */
@@ -620,9 +618,9 @@ a:hover {
     height: 50px;
     align-items: center;
     justify-content: center;
-    z-index: 2; /* Ensure buttons are above the scroll container */
-    opacity: 0; /* Hide buttons by default */
-    visibility: hidden; /* Hide buttons by default */
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .scroll-btn img {
@@ -633,26 +631,26 @@ a:hover {
 
 .scroll-btn:hover {
     background: #38bdf8;
-    transform: scale(1.1) translateY(-50%); /* Adjust transform to include translateY */
+    transform: scale(1.1) translateY(-50%);
     box-shadow: 0 0 15px #38bdf8;
 }
 
 .scroll-btn:active {
-    transform: scale(0.95) translateY(-50%); /* Adjust transform to include translateY */
+    transform: scale(0.95) translateY(-50%);
 }
 
 .scroll-prev {
-    left: 10px; /* Adjusted to align with the left edge of the container */
+    left: -60px; /* Positioned outside the container */
 }
 
 .scroll-next {
-    right: 10px; /* Adjusted to align with the right edge of the container */
+    right: -60px; /* Positioned outside the container */
 }
 
-/* Show buttons only when necessary */
+/* Show buttons on hover */
 .scroll-wrapper:hover .scroll-btn {
-    opacity: 1; /* Show buttons */
-    visibility: visible; /* Show buttons */
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Scroll Content */
@@ -694,7 +692,7 @@ a:hover {
 
 /* Skill Description */
 .skill-description {
-    color: #ffffff; /* Set to white */
+    color: #ffffff;
     font-size: 0.9rem;
     margin-top: 8px;
     text-align: center;
@@ -739,7 +737,7 @@ a:hover {
         min-height: 180px;
     }
     .scroll-prev {
-        left: -40px; /* Adjusted for smaller screens */
+        left: -40px;
     }
     .scroll-next {
         right: -40px;
