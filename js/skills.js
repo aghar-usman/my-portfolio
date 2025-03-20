@@ -5,76 +5,80 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.querySelector(".scroll-prev");
 
     if (scrollContainer) {
-        const skills = Array.from(scrollContainer.children);
-
-        // Duplicate elements for seamless scrolling
-        skills.forEach((skill) => {
-            const clone = skill.cloneNode(true);
-            scrollContainer.appendChild(clone);
-        });
-
-        let scrollSpeed = 1; // Adjust speed for auto-scrolling
-        let scrollStep = 80; // Adjust step size for Next/Prev buttons
-        let isPaused = true; // Start in paused mode
+        let scrollSpeed = 1.2; // Adjust speed for auto-scrolling
+        let scrollStep = 200; // Step size for Next/Prev buttons
+        let isPaused = false;
         let animationFrame;
-        let hideTimeout;
 
-        // Auto-scrolling function
+        // Duplicate elements for infinite loop effect
+        function duplicateItems() {
+            const skills = Array.from(scrollContainer.children);
+            skills.forEach((skill) => {
+                const clone = skill.cloneNode(true);
+                scrollContainer.appendChild(clone);
+            });
+        }
+
+        duplicateItems(); // Call function to duplicate skills
+
+        // Auto-scroll function
         function scrollSkills() {
             if (!isPaused) {
                 scrollContainer.scrollLeft += scrollSpeed;
 
-                // Seamless looping logic
+                // Reset scroll position for seamless looping
                 if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-                    scrollContainer.scrollLeft = 0; // Reset scroll position for a smooth loop
+                    scrollContainer.scrollLeft = 0;
                 }
             }
             animationFrame = requestAnimationFrame(scrollSkills);
         }
 
-        // Show buttons when hovering
-        function showButtons() {
-            nextButton.style.display = "flex";
-            prevButton.style.display = "flex";
-            if (hideTimeout) clearTimeout(hideTimeout);
+        scrollSkills(); // Start infinite scrolling
+
+        // Function to move to the next skill with seamless transition
+        function scrollNext() {
+            scrollContainer.scrollLeft += scrollStep;
+            if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+                scrollContainer.scrollLeft = 0;
+            }
         }
 
-        // Hide buttons after a delay
-        function hideButtons() {
-            hideTimeout = setTimeout(() => {
-                nextButton.style.display = "none";
-                prevButton.style.display = "none";
-            }, 800); // Delay before hiding
+        // Function to move to the previous skill with seamless transition
+        function scrollPrev() {
+            if (scrollContainer.scrollLeft === 0) {
+                scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
+            }
+            scrollContainer.scrollLeft -= scrollStep;
         }
 
-        // Start scrolling when hovered
-        scrollWrapper.addEventListener("mouseenter", () => {
+        // Show/Hide buttons on hover
+        scrollWrapper.addEventListener("mouseenter", () => (isPaused = true));
+        scrollWrapper.addEventListener("mouseleave", () => {
             isPaused = false;
             scrollSkills();
-            showButtons();
         });
 
-        // Pause scrolling and hide buttons when mouse leaves
-        scrollWrapper.addEventListener("mouseleave", () => {
-            isPaused = true;
-            cancelAnimationFrame(animationFrame);
-            hideButtons();
-        });
-
-        // Next Button Click Event
-        nextButton.addEventListener("click", () => {
-            scrollContainer.scrollLeft += scrollStep;
-            showButtons();
-        });
-
-        // Previous Button Click Event
-        prevButton.addEventListener("click", () => {
-            scrollContainer.scrollLeft -= scrollStep;
-            showButtons();
-        });
+        // Attach event listeners to buttons
+        nextButton.addEventListener("click", scrollNext);
+        prevButton.addEventListener("click", scrollPrev);
 
         // Hide buttons initially
         nextButton.style.display = "none";
         prevButton.style.display = "none";
+
+        // Show buttons on hover
+        scrollWrapper.addEventListener("mouseenter", () => {
+            nextButton.style.display = "flex";
+            prevButton.style.display = "flex";
+        });
+
+        // Hide buttons after a delay when not hovered
+        scrollWrapper.addEventListener("mouseleave", () => {
+            setTimeout(() => {
+                nextButton.style.display = "none";
+                prevButton.style.display = "none";
+            }, 1000);
+        });
     }
 });
