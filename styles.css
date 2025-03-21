@@ -64,7 +64,9 @@ a:hover {
     padding: 20px;
 }
 
-
+.chrome-zoom {
+    zoom: 0.9;
+  }
   
 
 /* ================= NAVBAR ================= */
