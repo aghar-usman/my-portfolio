@@ -64,6 +64,10 @@ a:hover {
     padding: 20px;
 }
 
+.chrome-zoom {
+    zoom: 0.8;
+  }
+  
 
 /* ================= NAVBAR ================= */
 
