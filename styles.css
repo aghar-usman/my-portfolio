@@ -715,6 +715,9 @@ a:hover {
         width: 170px;
         min-height: 200px;
     }
+    .skill-description {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -730,7 +733,11 @@ a:hover {
         width: 150px;
         min-height: 180px;
     }
+    .skill-description {
+        display: none;
+    }
 }
+
 
 /* Animations */
 @keyframes fadeInDown {
