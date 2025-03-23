@@ -54,14 +54,15 @@ html {
     align-items: center;
 }
 
+/* Default size for desktop */
 .navbar-logo img {
-    height: 96px;
-    max-width: 240px;
+    height: 110px;  /* Increased for better visibility */
+    max-width: 260px; /* Slightly increased width */
     transition: transform 0.3s ease-in-out;
 }
 
 .navbar-logo img:hover {
-    transform: scale(1.07);
+    transform: scale(1.1);
 }
 
 /* ===== Navigation Links ===== */
@@ -152,6 +153,11 @@ html {
         align-items: center;
     }
 
+    .navbar-logo img {
+        height: 75px;  /* Adjusted logo size for mobile */
+        max-width: 180px;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -169,6 +175,7 @@ html {
         align-items: center;
         transform: translateY(-100%);
         transition: transform 0.5s ease-in-out;
+        padding-top: 20px;
     }
 
     .nav-links.active {
@@ -176,23 +183,24 @@ html {
     }
     
     .nav-links li {
-        margin: 20px 0;
+        margin: 15px 0;
     }
 
     .nav-links a {
         font-size: 1.6rem;
-        padding: 14px;
+        padding: 16px 20px; /* Added horizontal padding for better touch experience */
         width: 100%;
         text-align: center;
         border-top: 1px solid rgba(56, 189, 248, 0.4);
-        transition: background 0.3s ease;
+        transition: background 0.3s ease, text-shadow 0.3s ease;
     }
 
     .nav-links a:hover {
-        background: rgba(56, 189, 248, 0.15);
-        text-shadow: 0 0 8px #4ade80;
+        background: rgba(56, 189, 248, 0.2);
+        text-shadow: 0 0 10px #4ade80;
     }
 }
+
 
 
 
