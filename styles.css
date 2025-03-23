@@ -245,7 +245,7 @@ a:hover {
 
 /* HERO HEADING */
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #f8fafc; /* Slightly softer white */
     text-shadow: 0 0 20px #38bdf8, 0 0 40px rgba(56, 189, 248, 0.8);
