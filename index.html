@@ -271,25 +271,59 @@
 </section>
 
     
-<!-- Timeline Section -->
-<section id="Experience" class="section Eperience">
-    <h2>🚀 Experience ⏳</h2>
-    <ul>
-        <li>🎓 Bachelor's in Information Science & Engineering - Malnad College of Engineering (2021-2025)</li>
-        <li>💼 Internship at Prodigy Infotech - Data Visualization & EDA.</li>
-        <li>💻 Internship at Teragon EdTech - Web3.0 & Cloud Computing.</li>
-    </ul>
+<!-- Experience Section -->
+<section class="experience">
+    <h2 class="section-title">My Career Journey</h2>
+
+    <div class="track">
+        <!-- Planet 1 (Clickable) -->
+        <div class="planet" data-planet="1">
+            <div class="planet-circle">
+                <img src="images/mce.png" alt="Malnad College Of Engineering">
+            </div>
+        </div>
+
+        <!-- Planet 2 (Clickable) -->
+        <div class="planet" data-planet="2">
+            <div class="planet-circle">
+                <img src="images/tt.png" alt="Team Thai">
+            </div>
+        </div> <!-- ✅ Closing div added for planet 2 -->
+    </div> <!-- ✅ Closing div added for .track -->
+
+    <!-- Detail Box (Hidden by Default) -->
+    <div class="details-box" id="detailsBox">
+        <div class="details-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h3 id="institutionTitle"></h3>
+            <p id="institutionDescription"></p>
+        </div>
+    </div>
 </section>
 
-<!-- Footer -->
+
+
 <footer class="footer">
-    <p>&copy; 2025 Aghar Usman K T. All rights reserved.</p>
-    <div class="footer-links">
-        <a href="https://github.com/agharusman" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/agharusman" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="your_research_paper_link" target="_blank" rel="noopener">Research Paper</a>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="https://github.com/aghar-usman" target="_blank" rel="noopener">
+                <img src="images/git.png" alt="GitHub" class="footer-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/aghar-usmankt/" target="_blank" rel="noopener">
+                <img src="images/l.png" alt="LinkedIn" class="footer-icon">
+            </a>
+        </div>
+
+        <div class="footer-contact">
+            <p>📧 <a href="mailto:agharusman529@gmail.com">agharusman529@gmail.com</a></p>
+            <p>📞 <a href="tel:+919074755907">+91 90747 55907</a></p>
+        </div>
     </div>
+
+    <!-- Apply the new class for copyright -->
+    <p class="footer-copyright">© 2025 Aghar Usman K T. All rights reserved.</p>
 </footer>
+
 
 <!-- Load Three.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -300,9 +334,11 @@
 
 <!-- Your Custom Scripts -->
 <script src="js/home.js"></script>
+<script src="js/acheivement.js"></script>
 <script src="js/navbar.js"></script>
-<script src="js/skills.js"></script>
 <script src="js/about.js"></script>
-<script src="js/project.js"></script>    
+<script src="js/skills.js"></script>
+<script src="js/project.js"></script>
+<script src="js/experience.js"></script>
 </body>
 </html>
