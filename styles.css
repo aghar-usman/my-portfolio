@@ -121,6 +121,10 @@ html {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show menu toggle button on small screens */
+    }
+
     .nav-links {
         position: fixed;
         width: 80%;
@@ -136,6 +140,10 @@ html {
         transition: right 0.5s ease-in-out;
         border-left: 2px solid rgba(56, 189, 248, 0.4);
         box-shadow: -5px 0 15px rgba(56, 189, 248, 0.2);
+    }
+
+    .nav-links.active {
+        right: 0;
     }
 
     .nav-links a {
@@ -174,8 +182,18 @@ html {
         color: #4ade80; /* Green text on hover and selection */
         text-shadow: 0 0 10px #4ade80;
     }
-}
 
+    /* Fix Active Menu Item */
+    .nav-links a.active {
+        color: #4ade80;
+        text-shadow: 0 0 20px #4ade80;
+    }
+
+    /* Prevent Body Scroll When Menu is Open */
+    .no-scroll {
+        overflow: hidden;
+    }
+}
 
 /* ================= HERO SECTION ================= */
 .hero {
