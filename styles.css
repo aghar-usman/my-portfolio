@@ -852,7 +852,7 @@ html {
 
 /* Section Title */
 .section-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     font-weight: 700;
     color: #4fc3f7;
     margin-bottom: 20px;
@@ -860,6 +860,8 @@ html {
     display: inline-block;
     padding-bottom: 8px;
     transition: all 0.3s ease-in-out;
+    max-width: 90%;
+    word-wrap: break-word;
 }
 
 .section-title:hover {
@@ -940,7 +942,7 @@ html {
 /* Achievement Content */
 .achievement-content h3 {
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #FFD700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -995,14 +997,22 @@ html {
 }
 
 @media (max-width: 768px) {
+    .achievements {
+        padding: 50px 5%;
+    }
+
     .achievements-container {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
+
     .achievement-card {
         height: 240px;
     }
+
     .section-title {
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 4vw, 2rem);
+        max-width: 85%;
     }
 }
 
@@ -1010,12 +1020,20 @@ html {
     .achievements {
         padding: 40px 5%;
     }
+
     .achievement-card {
         height: 220px;
     }
+
     .achievement-front {
         font-size: 1rem;
+        padding: 10px;
     }
+
+    .achievement-content h3 {
+        font-size: 1rem;
+    }
+
     .fake-btn {
         font-size: 0.85rem;
         padding: 8px 12px;
@@ -1026,7 +1044,6 @@ html {
 * {
     box-sizing: border-box;
 }
-
 
 /*================== Experience Section ==================*/
 .experience {
