@@ -64,6 +64,9 @@ a:hover {
     padding: 20px;
 }
 
+.chrome-zoom {
+  zoom: 0.8;
+}
 
 
 /* ================= NAVBAR ================= */
@@ -738,7 +741,6 @@ a:hover {
     }
 }
 
-
 /* Animations */
 @keyframes fadeInDown {
     0% { opacity: 0; transform: translateY(-15px); }
@@ -885,8 +887,6 @@ a:hover {
         height: 360px;
     }
 }
-
-
 
 /*================== Achievements Section ==================*/
 .achievements {
@@ -1087,55 +1087,369 @@ a:hover {
 }
 
 
-
-
-/* ================= CONTACT SECTION ================= */
-.contact {
-    background-color: #111827;
+/*================== Experience Section ==================*/
+.experience {
     text-align: center;
-    padding: 100px 20px;
+    padding: 100px 12%;
+    background: radial-gradient(circle, rgb(20, 30, 50) 20%, #060912 100%);
+    color: #ffffff;
 }
 
-.contact h2 {
-    color: #38bdf8;
-    text-shadow: 0 0 12px #4ade80;
+/* Section Title */
+.section-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #4fc3f7;
+    margin-bottom: 40px;
+    border-bottom: 5px solid rgba(79, 195, 247, 0.9);
+    display: inline-block;
+    padding-bottom: 15px;
 }
 
-.contact p {
-    margin: 10px 0;
-    color: #b0b3b8;
+/* Track (Container for Planets) */
+.track {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
-.contact a {
-    color: #4ade80;
-    text-decoration: none;
+/* Planet Styling (Increased Size) */
+.planet {
+    cursor: pointer;
+    position: relative;
+    width: 180px;  /* Increased size */
+    height: 180px; /* Increased size */
+    transition: transform 0.2s ease-in-out;
+}
+
+.planet-circle {
+    width: 180px;  /* Increased size */
+    height: 180px; /* Increased size */
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    box-shadow: 0 8px 20px rgba(79, 195, 247, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Ensure logos inside planets scale properly */
+.planet-circle img {
+    width: 85%; /* Slightly reduced to fit better */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    border-radius: 50%;
+    padding: 8px; /* Add space inside the planet */
+}
+
+/* Hover Effects */
+.planet:hover {
+    transform: scale(1.15);
+}
+
+.planet:hover .planet-circle {
+    box-shadow: 0 14px 30px rgba(79, 195, 247, 0.6);
+}
+
+/* Selected Planet Glow */
+.planet.selected .planet-circle {
+    box-shadow: 0 0 40px rgba(79, 195, 247, 1);
+}
+
+/* ========== Detail Box (Larger & More Readable) ========== */
+.details-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: rgba(15, 23, 42, 0.98);
+    color: white;
+    padding: 80px; /* Increased padding */
+    border-radius: 25px;
+    width: 95%;
+    max-width: 900px; /* Increased max width */
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 18px 50px rgba(79, 195, 247, 0.7);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Make Details Box Visible */
+.details-box.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Institution Title */
+.institution-name {
+    font-size: 3rem; /* Increased size */
     font-weight: bold;
-    transition: color 0.3s ease;
+    color: #61dafb;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
-.contact a:hover {
-    color: #38bdf8;
-    text-shadow: 0 0 10px #38bdf8;
+/* Institution Description (Bigger & More Spaced) */
+.institution-description {
+    font-size: 1.8rem; /* Increased size */
+    color: #ffffff;
+    line-height: 2;
+    width: 100%;
+    max-width: 750px; /* Increased width */
+    text-align: left;
+    padding: 30px 35px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    border-left: 10px solid #4fc3f7;
+    box-shadow: 0px 6px 20px rgba(79, 195, 247, 0.25);
+    font-weight: 500;
 }
 
-/* ================= RESPONSIVENESS ================= */
+/* Spacing between elements in description */
+.institution-description p {
+    margin: 12px 0;
+    font-size: 1.7rem; /* Increased size */
+    color: #e0e0e0;
+}
+
+/* Highlight Important Details */
+.institution-description strong {
+    color: #4fc3f7;
+    font-weight: bold;
+}
+
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 35px; /* Increased size */
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff5252;
+}
+
+/* ================= Responsive Design ================== */
+
+/* Tablets & Small Screens */
+@media (max-width: 1024px) {
+    .track {
+        gap: 80px;
+    }
+
+    .planet {
+        width: 160px;
+        height: 160px;
+    }
+
+    .planet-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .details-box {
+        width: 92%;
+        max-width: 600px;
+        padding: 50px;
+    }
+}
+
+/* Mobile Devices */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 50px 20px;
+    .track {
+        flex-direction: column; /* Stack planets vertically */
+        align-items: center;
+        gap: 40px;
     }
 
-    .projects-container {
-        grid-template-columns: 1fr;
+    .planet {
+        width: 150px;
+        height: 150px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        padding: 10px 0;
+    .planet-circle {
+        width: 150px;
+        height: 150px;
     }
 
-    .nav-links li {
-        margin: 10px 0;
+    .details-box {
+        width: 94%;
+        max-width: 550px;
+        padding: 45px;
+    }
+
+    .institution-name {
+        font-size: 2rem;
+    }
+
+    .institution-description {
+        font-size: 1.4rem;
+        padding: 16px 20px;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .track {
+        gap: 30px;
+    }
+
+    .planet {
+        width: 130px;
+        height: 130px;
+    }
+
+    .planet-circle {
+        width: 130px;
+        height: 130px;
+    }
+
+    .details-box {
+        width: 96%;
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    .institution-name {
+        font-size: 1.8rem;
+    }
+
+    .institution-description {
+        font-size: 1.3rem;
+        padding: 14px 18px;
+    }
+
+    .close-btn {
+        font-size: 30px;
+    }
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    text-align: center;
+    padding: 20px 12px;
+    background: #02050a; /* Darker than the experience section */
+    color: white;
+    font-size: 1.3rem;
+    box-shadow: 0 -2px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Footer Copyright Text */
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Soft separator */
+    padding-top: 12px;
+    margin-top: 18px;
+    font-size: 1rem; /* Slightly smaller */
+    color: rgba(255, 255, 255, 0.6); /* Light gray for subtle effect */
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+
+
+/* Footer Links */
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links a {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Footer Icons */
+.footer-icon {
+    width: 32px; /* Properly sized */
+    height: 32px;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* Hover Effect on Icons */
+.footer-links a:hover .footer-icon {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+/* Contact Details */
+.footer-contact {
+    margin-top: 10px;
+    color: white; /* Ensure text is properly white */
+}
+
+/* Contact Info */
+.footer-contact p {
+    margin: 4px 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white; /* Ensure proper visibility */
+}
+
+/* Email & Phone Link */
+.footer-contact a {
+    color: white; /* Proper contrast */
+    text-decoration: none;
+    font-weight: 500; /* Softer bold effect */
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-contact a:hover {
+    color: #4fc3f7; /* Highlight color */
+    text-decoration: underline;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 1.2rem;
+        padding: 18px 8px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-icon {
+        width: 28px; /* Adjusted for mobile */
+        height: 28px;
+    }
+
+    .footer-contact p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        font-size: 1.1rem;
+        padding: 15px 6px;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .footer-contact p {
+        font-size: 1rem;
     }
 }
