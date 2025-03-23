@@ -1,7 +1,7 @@
 /* Modern Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* ================= GLOBAL STYLES ================= */
+/* ================= CYBERPUNK GLOBAL STYLES ================= */
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +9,9 @@
 }
 
 body {
-    background: radial-gradient(circle, rgb(30, 40, 80) 20%, #020617 100%);
-    color: #d9e8f5;
-    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, rgb(10, 15, 40) 10%, rgb(5, 5, 20) 90%);
+    color: #0fffc1; /* Neon Cyan */
+    font-family: 'Orbitron', sans-serif; /* Cyberpunk-style font */
     scroll-behavior: smooth;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
@@ -24,8 +24,67 @@ body.no-scroll {
     overflow: hidden;
 }
 
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* ================= CYBERPUNK SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(10, 10, 25, 0.8);
+    border-left: 1px solid #0fffc1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0fffc1, #ff0090); /* Neon Gradient */
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px #0fffc1, 0px 0px 10px #ff0090;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff0090, #0fffc1);
+    box-shadow: 0px 0px 10px #ff0090, 0px 0px 15px #0fffc1;
+}
+
+/* ================= CYBERPUNK GLOW EFFECT ================= */
+.cyber-glow {
+    text-shadow: 0px 0px 5px #0fffc1, 0px 0px 10px #ff0090;
+}
+
+/* ================= LINK STYLING ================= */
+a {
+    color: #0fffc1;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff0090;
+    text-shadow: 0 0 8px #ff0090;
+}
+
+/* ================= CYBERPUNK CONTAINER BOX ================= */
+.cyber-box {
+    background: rgba(5, 5, 20, 0.8);
+    border: 2px solid #0fffc1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #0fffc1, 0px 0px 20px #ff0090;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cyber-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #ff0090, 0px 0px 25px #0fffc1;
+}
+
+/* ================= HACKER-STYLE CURSOR ================= */
+body {
+    cursor: url('https://cur.cursors-4u.net/games/gam-2/gam111.cur'), auto;
 }
 
 /* ================= NAVBAR ================= */
