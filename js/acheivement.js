@@ -1,13 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     const floatingImage = document.getElementById("floating-image");
+
+    // ✅ Check if floatingImage exists before accessing it
+    if (!floatingImage) {
+        console.error("Error: Element with ID 'floating-image' not found.");
+        return; // Exit script if element is missing
+    }
+
     const floatingImgTag = floatingImage.querySelector("img");
 
     document.querySelectorAll(".achievement-card").forEach(card => {
         card.addEventListener("mouseenter", function () {
-            const imageUrl = card.querySelector(".achievement-image").src;
-            floatingImgTag.src = imageUrl;
+            const imageElement = card.querySelector(".achievement-image");
+            if (!imageElement) return; // ✅ Prevent errors if .achievement-image is missing
+
+            floatingImgTag.src = imageElement.src;
             floatingImage.style.display = "block";
-            floatingImage.style.opacity = "0"; // Set opacity to 0 before animation
+            floatingImage.style.opacity = "0";
 
             anime({
                 targets: floatingImage,
@@ -19,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         card.addEventListener("mousemove", function (e) {
-            const offsetX = 30; // Offset so it doesn't cover the card
+            const offsetX = 30;
             const offsetY = 20;
 
             floatingImage.style.left = `${e.pageX + offsetX}px`;
