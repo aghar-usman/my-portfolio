@@ -45,7 +45,7 @@ html {
 .navbar.scrolled {
     background: rgba(2, 8, 23, 0.95);
     box-shadow: 0 2px 15px rgba(56, 189, 248, 0.2);
-    padding: 14px 6%;
+    padding: 12px 6%;
 }
 
 /* ===== Logo Styling ===== */
@@ -56,8 +56,9 @@ html {
 
 /* Default size for desktop */
 .navbar-logo img {
-    height: 110px;  /* Increased for better visibility */
-    max-width: 260px; /* Slightly increased width */
+    height: auto; /* Use auto for better responsiveness */
+    width: 200px; /* Adjusted for better visibility */
+    max-width: 100%; /* Ensure it doesn't overflow */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -154,8 +155,8 @@ html {
     }
 
     .navbar-logo img {
-        height: 75px;  /* Adjusted logo size for mobile */
-        max-width: 180px;
+        width: 150px; /* Adjusted logo size for mobile */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .menu-toggle {
@@ -200,7 +201,6 @@ html {
         text-shadow: 0 0 10px #4ade80;
     }
 }
-
 
 
 
