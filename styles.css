@@ -938,7 +938,6 @@ github-icon { background-image: url('images/github.gif'); }
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 15px;
     backface-visibility: hidden;
     overflow: hidden;
 }
@@ -950,15 +949,17 @@ github-icon { background-image: url('images/github.gif'); }
     font-size: 1.2rem;
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
 }
 
-/* Back Side */
+/* Back Side (No Borders or Padding) */
 .achievement-back {
     transform: rotateY(180deg);
     background: linear-gradient(135deg, #3b82f6, #4ade80);
     color: #ffffff;
-    border: none;
     overflow: hidden;
+    padding: 0;
+    border: none;
 }
 
 /* Achievement Content */
@@ -983,7 +984,7 @@ github-icon { background-image: url('images/github.gif'); }
     overflow: hidden;
 }
 
-/* Image */
+/* Image (Full Coverage) */
 .achievement-image {
     width: 100%;
     height: 100%;
