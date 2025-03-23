@@ -22,9 +22,17 @@ for (let i = 0; i < particlesCount * 3; i++) {
 
 particlesGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
 
+// Use a mix of green and blue particles for a dynamic neon effect
+const colors = new Float32Array(particlesCount * 3);
+for (let i = 0; i < particlesCount; i++) {
+    const color = Math.random() > 0.5 ? new THREE.Color("#4ade80") : new THREE.Color("#38bdf8"); // Green & Blue mix
+    colors.set(color.toArray(), i * 3);
+}
+particlesGeometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+
 const particlesMaterial = new THREE.PointsMaterial({
-    color: 0x38bdf8, // Neon blue, matching theme
     size: 0.05,
+    vertexColors: true,
     transparent: true,
     opacity: 0.8,
     blending: THREE.AdditiveBlending
@@ -60,13 +68,15 @@ if (typeof anime === "undefined") {
             translateY: [-10, 0],
             opacity: [0, 1],
             easing: "easeOutExpo",
-            duration: 800
+            duration: 800,
+            color: "#4ade80" // Neon Green Effect
         })
         .add({
             targets: ".hero-content h1 span",
             opacity: [1, 0.7],
             easing: "easeInExpo",
             duration: 600,
-            delay: 500
+            delay: 500,
+            color: "#38bdf8" // Neon Blue Effect
         });
 }
