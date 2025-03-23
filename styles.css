@@ -120,11 +120,8 @@ html {
 }
 
 /* Mobile Navigation */
+/* Mobile Navigation Fix */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
     .nav-links {
         position: fixed;
         width: 80%;
@@ -145,19 +142,45 @@ html {
     .nav-links.active {
         right: 0;
     }
-    
+
     .nav-links a {
         width: 100%;
         text-align: center;
         padding: 15px;
         font-size: 1.4rem;
-        border-bottom: 1px solid rgba(56, 189, 248, 0.3);
-        transition: background 0.3s ease;
+        font-weight: bold;
+        color: #38bdf8;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        width: 0;
+        height: 3px;
+        background-color: #4ade80;
+        transition: width 0.4s ease, left 0.4s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+        width: 50%;
+        left: 25%;
     }
 
     .nav-links a:hover {
-        background: rgba(56, 189, 248, 0.15);
-        text-shadow: 0 0 8px #4ade80;
+        color: #4ade80;
+        text-shadow: 0 0 12px #4ade80;
+    }
+
+    /* Fix Active Menu Item */
+    .nav-links a.active {
+        color: #4ade80;
+        text-shadow: 0 0 20px #4ade80;
     }
 }
 
