@@ -957,7 +957,6 @@ github-icon { background-image: url('images/github.gif'); }
     transform: rotateY(180deg);
     background: linear-gradient(135deg, #3b82f6, #4ade80);
     color: #ffffff;
-    /* Remove the border */
     border: none;
     overflow: hidden;
 }
@@ -970,7 +969,6 @@ github-icon { background-image: url('images/github.gif'); }
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 
 /* Image Wrapper */
 .achievement-img-wrapper {
@@ -989,7 +987,7 @@ github-icon { background-image: url('images/github.gif'); }
 .achievement-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image completely covers the back card */
+    object-fit: cover;
 }
 
 /* Fake Button */
@@ -1026,17 +1024,12 @@ github-icon { background-image: url('images/github.gif'); }
     }
 
     .achievements-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
     }
 
     .achievement-card {
-        height: 240px;
-    }
-
-    .section-title {
-        font-size: clamp(1.8rem, 4vw, 2rem);
-        max-width: 85%;
+        height: 260px;
     }
 }
 
@@ -1045,13 +1038,21 @@ github-icon { background-image: url('images/github.gif'); }
         padding: 40px 5%;
     }
 
+    .achievements-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .achievement-card {
-        height: 220px;
+        width: 90%;
+        max-width: 320px;
+        height: 240px;
     }
 
     .achievement-front {
-        font-size: 1rem;
-        padding: 10px;
+        font-size: 1.1rem;
+        padding: 12px;
     }
 
     .achievement-content h3 {
@@ -1068,6 +1069,7 @@ github-icon { background-image: url('images/github.gif'); }
 * {
     box-sizing: border-box;
 }
+
 
 /*================== Experience Section ==================*/
 .experience {
