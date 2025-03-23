@@ -121,10 +121,6 @@ html {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show menu toggle button on small screens */
-    }
-
     .nav-links {
         position: fixed;
         width: 80%;
@@ -142,15 +138,12 @@ html {
         box-shadow: -5px 0 15px rgba(56, 189, 248, 0.2);
     }
 
-    .nav-links.active {
-        right: 0;
-    }
-
     .nav-links a {
         width: 100%;
         text-align: center;
-        padding: 15px;
-        font-size: 1.4rem;
+        padding: 16px 0; /* Adjusted padding */
+        margin: 12px 0; /* Added margin to prevent overlap */
+        font-size: 1.5rem;
         font-weight: bold;
         color: #38bdf8;
         text-decoration: none;
@@ -158,11 +151,12 @@ html {
         transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
+    /* Underline effect */
     .nav-links a::after {
         content: "";
         position: absolute;
         left: 50%;
-        bottom: -5px;
+        bottom: -6px; /* Adjusted to prevent overlap */
         width: 0;
         height: 3px;
         background-color: #4ade80;
@@ -175,20 +169,10 @@ html {
         left: 25%;
     }
 
-    .nav-links a:hover {
-        color: #4ade80;
-        text-shadow: 0 0 12px #4ade80;
-    }
-
-    /* Fix Active Menu Item */
+    .nav-links a:hover,
     .nav-links a.active {
-        color: #4ade80;
-        text-shadow: 0 0 20px #4ade80;
-    }
-
-    /* Prevent Body Scroll When Menu is Open */
-    .no-scroll {
-        overflow: hidden;
+        color: #4ade80; /* Green text on hover and selection */
+        text-shadow: 0 0 10px #4ade80;
     }
 }
 
