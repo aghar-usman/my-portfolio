@@ -916,8 +916,8 @@ a:hover {
 /* Achievements Container */
 .achievements-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     max-width: 1100px;
     margin: 40px auto;
     padding-bottom: 20px;
@@ -927,14 +927,14 @@ a:hover {
 .achievement-card {
     position: relative;
     width: 100%;
-    height: 270px;
+    height: 260px;
     perspective: 1200px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
 .achievement-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .achievement-inner {
@@ -961,20 +961,18 @@ a:hover {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 0; /* Ensure no extra padding */
+    padding: 15px;
     backface-visibility: hidden;
-    overflow: hidden; /* Ensure no extra spacing */
+    overflow: hidden;
 }
 
 /* Front Side */
 .achievement-front {
     background: linear-gradient(135deg, #1e293b, #0f172a);
-    color:  #FFD700;
-    font-size: 1.3rem;
+    color: #FFD700;
+    font-size: 1.2rem;
     font-weight: 600;
-    transition: all 0.3s ease-in-out;
-    box-shadow: none; /* Remove unwanted shadows */
-    padding: 15px; /* Adjust padding to create spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Back Side */
@@ -982,15 +980,13 @@ a:hover {
     transform: rotateY(180deg);
     background: linear-gradient(135deg, #3b82f6, #4ade80);
     color: #ffffff;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(79, 195, 247, 0.3); /* Subtle glowing border */
+    border: 1px solid rgba(79, 195, 247, 0.3);
 }
 
 /* Achievement Content */
 .achievement-content h3 {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #FFD700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1007,20 +1003,13 @@ a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: none; /* Ensure no border */
-    border-radius: 0; /* Remove any rounded corners */
-    padding: 0; /* Remove any internal spacing */
-    margin: 0; /* Remove margin */
 }
 
 /* Image */
 .achievement-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Make sure the image fills the card */
-    border: none; /* Remove any border */
-    outline: none; /* Remove focus outline */
-    box-shadow: none; /* Remove any extra shadow */
+    object-fit: cover;
 }
 
 /* Fake Button */
@@ -1035,30 +1024,28 @@ a:hover {
     text-transform: uppercase;
     box-shadow: 0 4px 12px rgba(255, 204, 0, 0.5);
     transition: all 0.3s ease-in-out;
-    display: inline-block;
 }
 
 .fake-btn:hover {
     background: #ffdb4d;
     box-shadow: 0 5px 15px rgba(255, 204, 0, 0.7);
-    transform: scale(1.08);
+    transform: scale(1.05);
     cursor: pointer;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .achievements-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
     .achievements-container {
-        grid-template-columns: 1fr; /* One card per row */
+        grid-template-columns: 1fr;
     }
     .achievement-card {
-        height: 230px;
+        height: 240px;
     }
     .section-title {
         font-size: 2rem;
@@ -1067,13 +1054,13 @@ a:hover {
 
 @media (max-width: 480px) {
     .achievements {
-        padding: 50px 5%;
+        padding: 40px 5%;
     }
     .achievement-card {
         height: 220px;
     }
     .achievement-front {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .fake-btn {
         font-size: 0.85rem;
