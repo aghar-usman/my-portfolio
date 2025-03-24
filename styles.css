@@ -864,6 +864,15 @@ body {
 
 
 /* ================= PROJECTS SECTION ================= */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4ade80;
+  text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8;
+  margin-bottom: 20px;
+}
+
 .projects-container {
   display: flex;
   flex-wrap: wrap;
