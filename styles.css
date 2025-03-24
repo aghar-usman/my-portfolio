@@ -822,6 +822,9 @@ body {
         height: 200px;
         padding: 12px;
     }
+    .scroll-content {
+        gap: 20px;
+    }
 }
 
 /* ================= PROJECTS SECTION ================= */
