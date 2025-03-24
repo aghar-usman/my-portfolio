@@ -640,7 +640,7 @@ body {
 }
 
 
-/* =================== Tech Skills Section - Cyberpunk Theme (Final) =================== */
+/* =================== Tech Skills Section - Cyberpunk Theme =================== */
 .skills-section {
     background: radial-gradient(circle, rgb(17, 24, 39) 20%, #060912 100%);
     padding: 60px 8%;
@@ -685,16 +685,21 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 25px 0;
-    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 /* Scroll Container */
 .scroll-container {
     display: flex;
-    overflow: hidden;
     white-space: nowrap;
+    width: max-content;
+    overflow: hidden;
     position: relative;
-    width: 100%;
 }
 
 /* Scroll Content with Animation */
@@ -710,6 +715,14 @@ body {
 @keyframes scrollAnimation {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
+}
+
+/* Slower Animation on Mobile */
+@media (max-width: 768px) {
+    @keyframes scrollAnimation {
+        from { transform: translateX(0); }
+        to { transform: translateX(-80%); }
+    }
 }
 
 /* Skill Card */
@@ -811,6 +824,11 @@ body {
         height: 70px;
         width: 70px;
     }
+    .scroll-container {
+        overflow-x: auto;
+        animation: none;
+        display: flex;
+    }
 }
 
 @media (max-width: 480px) {
@@ -830,6 +848,11 @@ body {
     }
     .skill-name {
         font-size: 1.1rem;
+    }
+    .scroll-container {
+        overflow-x: auto;
+        animation: none;
+        display: flex;
     }
 }
 
