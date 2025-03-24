@@ -1250,32 +1250,33 @@ body {
 /*================== Experience Section ==================*/
 .experience {
     text-align: center;
-    padding: 100px 12%;
+    padding: 80px 8%; /* Adjusted padding for better spacing */
     background: radial-gradient(circle, rgb(20, 30, 50) 20%, #060912 100%);
     color: #ffffff;
 }
 
 /* Section Title */
 .section-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
     font-weight: 700;
     color: #4ade80; /* Neon Green */
     margin-bottom: 40px;
     border-bottom: 5px solid rgba(79, 195, 247, 0.9);
     display: inline-block;
     padding-bottom: 12px;
+    line-height: 1.2; /* Improved line height */
 }
 
 /* Track (Container for Planets) */
 .track {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 60px; /* Adjusted gap for better spacing */
     margin-top: 40px;
     flex-wrap: wrap;
 }
 
-/* Responsive Planet Sizing */
+/* Planet Styling */
 .planet {
     cursor: pointer;
     position: relative;
@@ -1299,11 +1300,10 @@ body {
 
 /* Ensure logos inside planets scale properly */
 .planet-circle img {
-    width: 85%; /* Slightly increased */
-    height: auto;
-    object-fit: contain;
-    border-radius: 50%;
-    padding: 6px;
+    width: 80%; /* Adjusted to fit logos properly */
+    height: 80%; /* Adjusted to fit logos properly */
+    object-fit: contain; /* Ensures the logo is fully visible */
+    padding: 10px; /* Added padding for better spacing */
 }
 
 /* Hover Effects */
@@ -1329,7 +1329,7 @@ body {
     transform: translate(-50%, -50%) scale(0.95);
     background: rgba(15, 23, 42, 0.98);
     color: white;
-    padding: 60px;
+    padding: 40px; /* Adjusted padding for better spacing */
     border-radius: 25px;
     width: 90%;
     max-width: 850px;
@@ -1351,7 +1351,7 @@ body {
 
 /* Institution Title */
 .institution-name {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.2rem); /* Responsive font size */
     font-weight: bold;
     color: #4ade80; /* Neon Green */
     margin-bottom: 18px;
@@ -1360,13 +1360,13 @@ body {
 
 /* Institution Description */
 .institution-description {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 4vw, 1.5rem); /* Responsive font size */
     color: #ffffff;
-    line-height: 1.8;
+    line-height: 1.6; /* Improved line height */
     width: 100%;
     max-width: 700px;
     text-align: left;
-    padding: 24px 28px;
+    padding: 20px; /* Adjusted padding */
     background: rgba(255, 255, 255, 0.18);
     border-radius: 14px;
     border-left: 8px solid #4ade80; /* Neon Green */
@@ -1381,6 +1381,7 @@ body {
     right: 22px;
     font-size: 32px;
     cursor: pointer;
+    color: #ffffff; /* Added color for visibility */
 }
 
 .close-btn:hover {
@@ -1392,36 +1393,64 @@ body {
 /* Tablets */
 @media (max-width: 1024px) {
     .track {
-        gap: 70px;
+        gap: 50px; /* Adjusted gap */
     }
 
     .planet {
         width: 160px;
         height: 160px;
     }
+
+    .details-box {
+        padding: 30px; /* Adjusted padding */
+    }
 }
 
 /* Mobile Devices */
 @media (max-width: 768px) {
+    .experience {
+        padding: 60px 5%; /* Adjusted padding */
+    }
+
     .track {
-        gap: 50px;
+        gap: 40px; /* Adjusted gap */
     }
 
     .planet {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .details-box {
+        padding: 20px; /* Adjusted padding */
+    }
+
+    .institution-description {
+        padding: 16px; /* Adjusted padding */
     }
 }
 
 /* Small Mobile Screens */
 @media (max-width: 480px) {
+    .experience {
+        padding: 40px 5%; /* Adjusted padding */
+    }
+
     .track {
-        gap: 40px;
+        gap: 30px; /* Adjusted gap */
     }
 
     .planet {
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .details-box {
+        padding: 16px; /* Adjusted padding */
+    }
+
+    .institution-description {
+        padding: 12px; /* Adjusted padding */
     }
 }
 
