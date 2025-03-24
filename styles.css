@@ -87,6 +87,7 @@ body {
     cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1018.cur'), auto;
 }
 
+
 /* ================= NAVBAR ================= */
 
 .navbar {
@@ -97,7 +98,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 8px 3%; /* Adjusted height */
+    padding: 12px 5%; /* Increased padding for more space */
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(56, 189, 248, 0.6);
@@ -111,7 +112,7 @@ body {
 .navbar.scrolled {
     background: rgba(2, 8, 23, 0.95);
     box-shadow: 0 2px 6px rgba(56, 189, 248, 0.2);
-    padding: 5px 3%;
+    padding: 8px 5%; /* Adjusted padding for scrolled state */
 }
 
 /* ===== Logo Styling ===== */
@@ -120,9 +121,8 @@ body {
     align-items: center;
 }
 
-/* Adjusted logo */
 .navbar-logo img {
-    width: 85px;
+    width: 100px; /* Increased logo size */
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -136,18 +136,20 @@ body {
     display: flex;
     justify-content: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 15px; /* Increased spacing between links */
 }
 
 .nav-links a {
     color: #0fffc1;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Slightly larger font size */
     text-decoration: none;
-    padding: 3px 0;
+    padding: 5px 0; /* Adjusted padding */
     position: relative;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -209,11 +211,11 @@ body {
 /* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 768px) {
     .navbar {
-        padding: 5px 16px;
+        padding: 8px 16px;
     }
 
     .navbar-logo img {
-        width: 75px;
+        width: 85px; /* Adjusted logo size for mobile */
     }
 
     .menu-toggle {
@@ -240,11 +242,11 @@ body {
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 15px 0; /* Increased spacing for mobile */
     }
 
     .nav-links a {
-        font-size: 1.1rem;
+        font-size: 1.2rem; /* Larger font size for mobile */
         padding: 12px 14px;
         width: 100%;
         text-align: center;
