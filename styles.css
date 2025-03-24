@@ -97,7 +97,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 16px 8%; /* Increased padding for better spacing */
+    padding: 12px 8%; /* Adjusted padding for better spacing */
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(56, 189, 248, 0.6);
@@ -111,7 +111,7 @@ body {
 .navbar.scrolled {
     background: rgba(2, 8, 23, 0.95);
     box-shadow: 0 2px 6px rgba(56, 189, 248, 0.2);
-    padding: 12px 8%; /* Adjusted padding for scrolled state */
+    padding: 8px 8%; /* Adjusted padding for scrolled state */
 }
 
 /* ===== Logo Styling ===== */
@@ -121,7 +121,7 @@ body {
 }
 
 .navbar-logo img {
-    width: 120px; /* Increased logo size for desktop */
+    width: 90px; /* Adjusted logo size for desktop */
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -140,15 +140,15 @@ body {
 }
 
 .nav-links li {
-    margin: 0 20px; /* Increased spacing between links */
+    margin: 0 18px; /* Adjusted spacing between links */
 }
 
 .nav-links a {
     color: #4ade80; /* Neon Green */
     font-weight: 600;
-    font-size: 1.1rem; /* Slightly larger font size for desktop */
+    font-size: 1rem; /* Adjusted font size for desktop */
     text-decoration: none;
-    padding: 8px 0; /* Adjusted padding */
+    padding: 6px 0; /* Adjusted padding */
     position: relative;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -182,17 +182,17 @@ body {
     font-size: 1.8rem; /* Larger icon size */
     color: #4ade80; /* Neon Green */
     position: absolute;
-    right: 24px;
-    top: 16px;
+    right: 20px;
+    top: 14px;
     z-index: 1100;
 }
 
 .menu-toggle .bar {
     display: block;
-    width: 28px; /* Increased bar width */
+    width: 24px; /* Adjusted bar width */
     height: 3px;
     background: #4ade80; /* Neon Green */
-    margin: 6px auto; /* Adjusted spacing */
+    margin: 5px auto; /* Adjusted spacing */
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -210,15 +210,16 @@ body {
 /* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 768px) {
     .navbar {
-        padding: 12px 16px; /* Adjusted padding for mobile */
+        padding: 10px 16px; /* Adjusted padding for mobile */
     }
 
     .navbar-logo img {
-        width: 100px; /* Adjusted logo size for mobile */
+        width: 70px; /* Adjusted logo size for mobile */
     }
 
     .menu-toggle {
         display: block;
+        top: 12px; /* Adjusted position */
     }
 
     .nav-links {
@@ -241,12 +242,12 @@ body {
     }
 
     .nav-links li {
-        margin: 20px 0; /* Increased spacing for mobile */
+        margin: 16px 0; /* Adjusted spacing for mobile */
     }
 
     .nav-links a {
-        font-size: 1.3rem; /* Larger font size for mobile */
-        padding: 14px 16px; /* Increased padding for better touch targets */
+        font-size: 1.2rem; /* Adjusted font size for mobile */
+        padding: 12px 14px; /* Adjusted padding for better touch targets */
         width: 100%;
         text-align: center;
         border-top: 1px solid rgba(56, 189, 248, 0.4);
