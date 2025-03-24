@@ -723,6 +723,7 @@ body {
     transform: scale(1.1);
 }
 
+
 /* Individual Skill Icons */
 .python-icon { background-image: url('images/python.png'); }
 .java-icon { background-image: url('images/java.png'); }
