@@ -97,7 +97,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 12px 5%; /* Increased padding for more space */
+    padding: 16px 8%; /* Increased padding for better spacing */
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(56, 189, 248, 0.6);
@@ -111,7 +111,7 @@ body {
 .navbar.scrolled {
     background: rgba(2, 8, 23, 0.95);
     box-shadow: 0 2px 6px rgba(56, 189, 248, 0.2);
-    padding: 8px 5%; /* Adjusted padding for scrolled state */
+    padding: 12px 8%; /* Adjusted padding for scrolled state */
 }
 
 /* ===== Logo Styling ===== */
@@ -121,7 +121,7 @@ body {
 }
 
 .navbar-logo img {
-    width: 100px; /* Increased logo size */
+    width: 120px; /* Increased logo size for desktop */
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -140,15 +140,15 @@ body {
 }
 
 .nav-links li {
-    margin: 0 15px; /* Increased spacing between links */
+    margin: 0 20px; /* Increased spacing between links */
 }
 
 .nav-links a {
     color: #4ade80; /* Neon Green */
     font-weight: 600;
-    font-size: 1rem; /* Slightly larger font size */
+    font-size: 1.1rem; /* Slightly larger font size for desktop */
     text-decoration: none;
-    padding: 5px 0; /* Adjusted padding */
+    padding: 8px 0; /* Adjusted padding */
     position: relative;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -156,7 +156,7 @@ body {
 /* Hover & Active Effects */
 .nav-links a:hover {
     color: #38bdf8; /* Sky Blue */
-    text-shadow: 0 0 5px #38bdf8;
+    text-shadow: 0 0 8px #38bdf8; /* Enhanced glow effect */
 }
 
 .nav-links a::after {
@@ -179,42 +179,42 @@ body {
 .menu-toggle {
     display: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Larger icon size */
     color: #4ade80; /* Neon Green */
     position: absolute;
-    right: 20px;
-    top: 12px;
+    right: 24px;
+    top: 16px;
     z-index: 1100;
 }
 
 .menu-toggle .bar {
     display: block;
-    width: 24px;
+    width: 28px; /* Increased bar width */
     height: 3px;
     background: #4ade80; /* Neon Green */
-    margin: 5px auto;
+    margin: 6px auto; /* Adjusted spacing */
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
 /* ===== HAMBURGER MENU ANIMATION ===== */
 .menu-toggle.active .bar:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
 }
 .menu-toggle.active .bar:nth-child(2) {
     opacity: 0;
 }
 .menu-toggle.active .bar:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 768px) {
     .navbar {
-        padding: 8px 16px;
+        padding: 12px 16px; /* Adjusted padding for mobile */
     }
 
     .navbar-logo img {
-        width: 85px; /* Adjusted logo size for mobile */
+        width: 100px; /* Adjusted logo size for mobile */
     }
 
     .menu-toggle {
@@ -241,19 +241,25 @@ body {
     }
 
     .nav-links li {
-        margin: 15px 0; /* Increased spacing for mobile */
+        margin: 20px 0; /* Increased spacing for mobile */
     }
 
     .nav-links a {
-        font-size: 1.2rem; /* Larger font size for mobile */
-        padding: 12px 14px;
+        font-size: 1.3rem; /* Larger font size for mobile */
+        padding: 14px 16px; /* Increased padding for better touch targets */
         width: 100%;
         text-align: center;
         border-top: 1px solid rgba(56, 189, 248, 0.4);
+        transition: background 0.3s ease;
     }
 
     .nav-links a:hover {
-        background: rgba(56, 189, 248, 0.2);
+        background: rgba(56, 189, 248, 0.2); /* Subtle hover effect */
+        color: #38bdf8; /* Sky Blue */
+    }
+
+    .nav-links a::after {
+        display: none; /* Disable underline effect on mobile */
     }
 }
 
