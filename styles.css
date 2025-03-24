@@ -789,7 +789,7 @@ body {
 .tableau-icon { background-image: url('images/tableau.png'); }
 .git-icon { background-image: url('images/git1.png'); }
 .github-icon { background-image: url('images/github.gif'); }
-
+.jup-icon { background-image: url('images/jup.png'); }
 /* Responsive Design */
 @media (max-width: 1024px) {
     .scroll-container {
