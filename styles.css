@@ -784,17 +784,23 @@ body {
     }
     .skill-item {
         width: 180px;
-        height: 250px;
+        height: 250px; /* Fixed uniform height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .skill-name {
         font-size: 1.2rem;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        text-align: center;
+        overflow-wrap: break-word; /* Ensures wrapping */
+        word-wrap: break-word;
+        white-space: normal;
+        min-height: 40px; /* Ensures uniform spacing */
     }
     .skill-description {
         font-size: 0.85rem;
+        text-align: center;
     }
 }
 
@@ -811,10 +817,11 @@ body {
     }
     .skill-name {
         font-size: 1.1rem;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        white-space: normal;
+        min-height: 40px;
     }
     .skill-description {
         height: 50px;
@@ -836,26 +843,15 @@ body {
     }
     .skill-name {
         font-size: 1rem;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        white-space: normal;
+        min-height: 40px;
     }
     .skill-description {
         display: none; /* Hide on smaller screens */
     }
-}
-
-
-/* Animations */
-@keyframes fadeInDown {
-    0% { opacity: 0; transform: translateY(-15px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(15px); }
-    100% { opacity: 1; transform: translateY(0); }
 }
 
 
