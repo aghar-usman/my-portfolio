@@ -796,26 +796,29 @@ github-icon { background-image: url('images/github.gif'); }
     font-family: inherit; /* Inherit from body (Orbitron) */
     color: inherit; /* Inherit text color (Neon Cyan) */
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    padding: 20px;
 }
 
 /* Project Card Styling */
 .project-card {
-    background: rgba(5, 5, 20, 0.8);
+    background: rgba(5, 5, 20, 0.85);
     border: 2px solid #0fffc1;
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
+    border-radius: 12px;
+    width: 320px;
+    height: 220px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0px 0px 10px #0fffc1, 0px 0px 20px #ff0090;
+    box-shadow: 0px 0px 12px #0fffc1, 0px 0px 22px #ff0090;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -825,8 +828,8 @@ github-icon { background-image: url('images/github.gif'); }
 
 /* Card Hover Effect */
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px #ff0090, 0px 0px 25px #0fffc1;
+    transform: scale(1.07);
+    box-shadow: 0px 0px 18px #ff0090, 0px 0px 28px #0fffc1;
 }
 
 /* Inner Project Card Styling */
@@ -837,7 +840,7 @@ github-icon { background-image: url('images/github.gif'); }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 12px;
 }
 
 /* Project Front Side */
@@ -850,7 +853,7 @@ github-icon { background-image: url('images/github.gif'); }
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #0fffc1;
     transition: opacity 0.3s ease-in-out;
@@ -863,7 +866,7 @@ github-icon { background-image: url('images/github.gif'); }
     height: 100%;
     background: rgba(10, 10, 40, 0.95);
     color: #0fffc1;
-    padding: 15px;
+    padding: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -871,7 +874,7 @@ github-icon { background-image: url('images/github.gif'); }
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     font-family: inherit; /* Ensures font consistency */
 }
 
@@ -886,22 +889,22 @@ github-icon { background-image: url('images/github.gif'); }
 
 /* Technology Stack */
 .tech-stack {
-    margin-top: 10px;
+    margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 8px;
 }
 
 .tech-stack span {
-    background: rgba(0, 255, 193, 0.2);
+    background: rgba(0, 255, 193, 0.25);
     border: 1px solid #0fffc1;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
     font-weight: bold;
     color: #0fffc1;
-    text-shadow: 0px 0px 5px #0fffc1, 0px 0px 10px #ff0090;
+    text-shadow: 0px 0px 6px #0fffc1, 0px 0px 12px #ff0090;
 }
 
 /* Status Label (For WIP Projects) */
@@ -909,15 +912,14 @@ github-icon { background-image: url('images/github.gif'); }
     display: inline-block;
     background: #ff0090;
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
-    padding: 5px 8px;
-    border-radius: 5px;
+    padding: 6px 10px;
+    border-radius: 6px;
     text-transform: uppercase;
-    margin-top: 5px;
-    box-shadow: 0px 0px 8px #ff0090;
+    margin-top: 6px;
+    box-shadow: 0px 0px 10px #ff0090;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -925,9 +927,9 @@ github-icon { background-image: url('images/github.gif'); }
         justify-content: center;
     }
     .project-card {
-        flex: 1 1 280px;
-        max-width: 280px;
-        height: 360px;
+        flex: 1 1 300px;
+        max-width: 300px;
+        height: 240px;
     }
 }
 
@@ -935,13 +937,35 @@ github-icon { background-image: url('images/github.gif'); }
     .projects-container {
         flex-direction: column;
         align-items: center;
+        gap: 25px;
     }
     .project-card {
         width: 100%;
-        max-width: 280px;
-        height: 360px;
+        max-width: 320px;
+        height: 260px;
     }
 }
+
+@media (max-width: 480px) {
+    .projects {
+        padding: 40px 15px;
+    }
+    .projects-container {
+        gap: 20px;
+    }
+    .project-card {
+        max-width: 280px;
+        height: 250px;
+    }
+    .project-front {
+        font-size: 18px;
+    }
+    .project-back {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
 
 /*================== Achievements Section ==================*/
 .achievements {
