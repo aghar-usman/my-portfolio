@@ -98,6 +98,7 @@ body {
     width: 100%;
     z-index: 1000;
     padding: 8px 3%; /* Adjusted height */
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(56, 189, 248, 0.6);
     display: flex;
@@ -142,7 +143,7 @@ body {
 }
 
 .nav-links a {
-    color: #38bdf8;
+    color: #0fffc1;
     font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
@@ -153,8 +154,8 @@ body {
 
 /* Hover & Active Effects */
 .nav-links a:hover {
-    color: #4ade80;
-    text-shadow: 0 0 5px #4ade80;
+    color: #ff0090;
+    text-shadow: 0 0 5px #ff0090;
 }
 
 .nav-links a::after {
@@ -164,7 +165,7 @@ body {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #4ade80;
+    background-color: #ff0090;
     transition: width 0.3s ease;
 }
 
@@ -178,7 +179,7 @@ body {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
-    color: #38bdf8;
+    color: #0fffc1;
     position: absolute;
     right: 20px;
     top: 12px;
@@ -189,7 +190,7 @@ body {
     display: block;
     width: 24px;
     height: 3px;
-    background: #38bdf8;
+    background: #0fffc1;
     margin: 5px auto;
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -293,7 +294,7 @@ body {
     font-size: 2.6rem;
     font-weight: bold;
     color: #f8fafc; /* Slightly softer white */
-    text-shadow: 0 0 20px #38bdf8, 0 0 40px rgba(56, 189, 248, 0.8);
+    text-shadow: 0 0 20px #0fffc1, 0 0 40px rgba(56, 189, 248, 0.8);
     animation: glowText 2s ease-in-out infinite alternate;
     line-height: 1.3;
     margin-bottom: 20px;
@@ -301,16 +302,16 @@ body {
 
 @keyframes glowText {
     0% {
-        text-shadow: 0 0 15px #38bdf8, 0 0 30px rgba(56, 189, 248, 0.6);
+        text-shadow: 0 0 15px #0fffc1, 0 0 30px rgba(56, 189, 248, 0.6);
     }
     100% {
-        text-shadow: 0 0 30px #4ade80, 0 0 50px rgba(74, 222, 128, 0.8);
+        text-shadow: 0 0 30px #ff0090, 0 0 50px rgba(74, 222, 128, 0.8);
     }
 }
 
 .hero h1 span {
-    color: #4ade80;
-    text-shadow: 0 0 20px #4ade80, 0 0 40px rgba(74, 222, 128, 0.8);
+    color: #ff0090;
+    text-shadow: 0 0 20px #ff0090, 0 0 40px rgba(74, 222, 128, 0.8);
 }
 
 /* HERO SUBTEXT */
@@ -323,7 +324,7 @@ body {
 
 /* CTA BUTTON */
 .cta-button {
-    background: linear-gradient(135deg, #38bdf8, #4ade80);
+    background: linear-gradient(135deg, #0fffc1, #ff0090);
     color: #fff;
     padding: 14px 40px;
     border-radius: 30px;
@@ -407,7 +408,7 @@ body {
     .hero h1 {
         font-size: 2rem;
         line-height: 1.1;
-        text-shadow: 0 0 10px #4ade80, 0 0 20px rgba(74, 222, 128, 0.6);
+        text-shadow: 0 0 10px #ff0090, 0 0 20px rgba(74, 222, 128, 0.6);
     }
 
     .hero p {
@@ -615,7 +616,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #00eaff;
+    color: #0fffc1;
     border-bottom: 3px solid rgba(0, 234, 255, 0.8);
     display: inline-block;
     padding-bottom: 10px;
@@ -791,8 +792,6 @@ github-icon { background-image: url('images/github.gif'); }
     0% { opacity: 0; transform: translateY(15px); }
     100% { opacity: 1; transform: translateY(0); }
 }
-
-
 
 /* ================= PROJECTS SECTION ================= */
 
@@ -983,7 +982,7 @@ github-icon { background-image: url('images/github.gif'); }
 .section-title {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
     font-weight: 700;
-    color: #4fc3f7;
+    color: #0fffc1;
     margin-bottom: 20px;
     border-bottom: 3px solid rgba(79, 195, 247, 0.8);
     display: inline-block;
@@ -994,8 +993,8 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 .section-title:hover {
-    color: #61dafb;
-    border-bottom-color: #61dafb;
+    color: #ff0090;
+    border-bottom-color: #ff0090;
 }
 
 /* Achievements Container */
@@ -1053,7 +1052,7 @@ github-icon { background-image: url('images/github.gif'); }
 /* Front Side */
 .achievement-front {
     background: linear-gradient(135deg, #1e293b, #0f172a);
-    color: #FFD700;
+    color: #0fffc1;
     font-size: 1.2rem;
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -1074,7 +1073,7 @@ github-icon { background-image: url('images/github.gif'); }
 .achievement-content h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: #FFD700;
+    color: #0fffc1;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1103,7 +1102,7 @@ github-icon { background-image: url('images/github.gif'); }
 .fake-btn {
     margin-top: 12px;
     padding: 10px 15px;
-    background: #ffcc00;
+    background: #ff0090;
     color: #222;
     font-size: 0.9rem;
     font-weight: bold;
@@ -1114,7 +1113,7 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 .fake-btn:hover {
-    background: #ffdb4d;
+    background: #ff0090;
     box-shadow: 0 5px 15px rgba(255, 204, 0, 0.7);
     transform: scale(1.05);
     cursor: pointer;
@@ -1192,7 +1191,7 @@ github-icon { background-image: url('images/github.gif'); }
 .section-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #4fc3f7;
+    color: #0fffc1;
     margin-bottom: 40px;
     border-bottom: 5px solid rgba(79, 195, 247, 0.9);
     display: inline-block;
@@ -1286,7 +1285,7 @@ github-icon { background-image: url('images/github.gif'); }
 .institution-name {
     font-size: 2.2rem;
     font-weight: bold;
-    color: #61dafb;
+    color: #0fffc1;
     margin-bottom: 18px;
     text-align: center;
 }
@@ -1302,7 +1301,7 @@ github-icon { background-image: url('images/github.gif'); }
     padding: 24px 28px;
     background: rgba(255, 255, 255, 0.18);
     border-radius: 14px;
-    border-left: 8px solid #4fc3f7;
+    border-left: 8px solid #0fffc1;
     box-shadow: 0px 6px 20px rgba(79, 195, 247, 0.25);
     font-weight: 500;
 }
@@ -1317,7 +1316,7 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 .close-btn:hover {
-    color: #ff5252;
+    color: #ff0090;
 }
 
 /* ================= Responsive Design ================== */
@@ -1431,7 +1430,7 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 .footer-contact a:hover {
-    color: #4fc3f7; /* Highlight color */
+    color: #0fffc1; /* Highlight color */
     text-decoration: underline;
 }
 
