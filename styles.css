@@ -656,19 +656,19 @@ body {
 
 /* Section Title */
 .section-title {
-    font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #4ade80; /* Neon Green */
+    color: #4ade80;
     border-bottom: 3px solid rgba(0, 234, 255, 0.8);
     display: inline-block;
     padding-bottom: 10px;
     text-shadow: 0 0 10px rgba(0, 234, 255, 0.8);
     animation: fadeInDown 1s ease-in-out;
-    margin: 0 auto 40px; /* Centered with margin */
-    max-width: 90%; /* Prevents overflow */
-    line-height: 1.2; /* Better line spacing */
+    margin: 0 auto 40px;
+    max-width: 90%;
+    line-height: 1.2;
 }
 
 /* Scroll Wrapper */
@@ -687,10 +687,12 @@ body {
 /* Scroll Container */
 .scroll-container {
     display: flex;
-    overflow: hidden;
+    overflow-x: auto;
     white-space: nowrap;
     max-width: 100%;
     position: relative;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Hide Scrollbar */
@@ -709,11 +711,11 @@ body {
 
 /* Skill Card */
 .skill-item {
-    width: 250px;
-    height: 300px;
+    width: 220px;
+    height: 280px;
     background: linear-gradient(135deg, rgb(20, 25, 40), rgb(10, 15, 30));
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 234, 255, 0.3);
     display: flex;
@@ -735,7 +737,7 @@ body {
 /* Skill Name */
 .skill-name {
     color: #e0f7fa;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-top: 12px;
     transition: color 0.3s ease-in-out;
@@ -775,82 +777,57 @@ body {
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
 }
 
-/* Individual Skill Icons */
-.python-icon { background-image: url('images/python.png'); }
-.java-icon { background-image: url('images/java.png'); }
-.html-icon { background-image: url('images/html.png'); }
-.css-icon { background-image: url('images/css.png'); }
-.js-icon { background-image: url('images/js.png'); }
-.sql-icon { background-image: url('images/sql.png'); }
-.tensorflow-icon { background-image: url('images/tensorflow.png'); }
-.pytorch-icon { background-image: url('images/pytorch.png'); }
-.r-icon { background-image: url('images/r.png'); }
-.powerbi-icon { background-image: url('images/powerbi.png'); }
-.tableau-icon { background-image: url('images/tableau.png'); }
-.git-icon { background-image: url('images/git1.png'); }
-.github-icon { background-image: url('images/github.gif'); }
-.jup-icon { background-image: url('images/jup.png'); }
 /* Responsive Design */
 @media (max-width: 1024px) {
     .scroll-container {
         max-width: 95%;
     }
     .skill-item {
-        width: 190px;
-        height: 260px;
+        width: 180px;
+        height: 250px;
     }
     .skill-description {
-        font-size: 0.85rem; /* Adjusted font size */
+        font-size: 0.85rem;
     }
 }
 
 @media (max-width: 768px) {
     .skills-section {
-        padding: 60px 5%; /* Adjusted padding */
+        padding: 50px 5%;
     }
     .section-title {
-        font-size: clamp(1.8rem, 6vw, 2.5rem); /* Adjusted font size */
-        padding-bottom: 8px;
-    }
-    .scroll-container {
-        max-width: 100%;
-        overflow-x: auto;
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
     }
     .skill-item {
-        width: 170px;
-        height: 230px;
+        width: 160px;
+        height: 220px;
+    }
+    .skill-name {
+        font-size: 1.1rem;
     }
     .skill-description {
         height: 50px;
-        font-size: 0.8rem; /* Adjusted font size */
-    }
-    .skill-name {
-        font-size: 1.2rem; /* Adjusted font size */
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .skills-section {
-        padding: 40px 5%; /* Adjusted padding */
+        padding: 40px 5%;
     }
     .section-title {
-        font-size: clamp(1.5rem, 6vw, 2rem); /* Adjusted font size */
-        padding-bottom: 6px;
-    }
-    .scroll-container {
-        max-width: 100%;
-        overflow-x: auto;
+        font-size: clamp(1.5rem, 6vw, 2rem);
     }
     .skill-item {
-        width: 150px;
-        height: 210px;
-        padding: 15px; /* Adjusted padding */
+        width: 140px;
+        height: 200px;
+        padding: 15px;
     }
     .skill-name {
-        font-size: 1.2rem; /* Adjusted font size */
+        font-size: 1rem;
     }
     .skill-description {
-        display: none; /* Hide description on small screens */
+        display: none; /* Hide on smaller screens */
     }
 }
 
