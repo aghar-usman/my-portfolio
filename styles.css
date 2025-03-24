@@ -10,7 +10,7 @@
 
 body {
     background: radial-gradient(circle, rgb(10, 15, 40) 10%, rgb(5, 5, 20) 90%);
-    color: #0fffc1; /* Neon Cyan */
+    color: #4ade80; /* Neon Green */
     font-family: 'Orbitron', sans-serif; /* Cyberpunk-style font */
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -36,57 +36,56 @@ html {
 
 ::-webkit-scrollbar-track {
     background: rgba(10, 10, 25, 0.8);
-    border-left: 1px solid #0fffc1;
+    border-left: 1px solid #4ade80; /* Neon Green */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #0fffc1, #ff0090); /* Neon Gradient */
+    background: linear-gradient(180deg, #4ade80, #38bdf8); /* Neon Green to Sky Blue */
     border-radius: 4px;
-    box-shadow: 0px 0px 5px #0fffc1, 0px 0px 10px #ff0090;
+    box-shadow: 0px 0px 5px #4ade80, 0px 0px 10px #38bdf8;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #ff0090, #0fffc1);
-    box-shadow: 0px 0px 10px #ff0090, 0px 0px 15px #0fffc1;
+    background: linear-gradient(180deg, #38bdf8, #4ade80);
+    box-shadow: 0px 0px 10px #38bdf8, 0px 0px 15px #4ade80;
 }
 
 /* ================= CYBERPUNK GLOW EFFECT ================= */
 .cyber-glow {
-    text-shadow: 0px 0px 5px #0fffc1, 0px 0px 10px #ff0090;
+    text-shadow: 0px 0px 5px #4ade80, 0px 0px 10px #38bdf8;
 }
 
 /* ================= LINK STYLING ================= */
 a {
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #ff0090;
-    text-shadow: 0 0 8px #ff0090;
+    color: #38bdf8; /* Sky Blue */
+    text-shadow: 0 0 8px #38bdf8;
 }
 
 /* ================= CYBERPUNK CONTAINER BOX ================= */
 .cyber-box {
     background: rgba(5, 5, 20, 0.8);
-    border: 2px solid #0fffc1;
+    border: 2px solid #4ade80; /* Neon Green */
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #0fffc1, 0px 0px 20px #ff0090;
+    box-shadow: 0px 0px 10px #4ade80, 0px 0px 20px #38bdf8;
     transition: transform 0.3s ease-in-out;
 }
 
 .cyber-box:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px #ff0090, 0px 0px 25px #0fffc1;
+    box-shadow: 0px 0px 15px #38bdf8, 0px 0px 25px #4ade80;
 }
 
 /* ================= HACKER-STYLE CURSOR ================= */
 body {
     cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1018.cur'), auto;
 }
-
 
 /* ================= NAVBAR ================= */
 
@@ -145,7 +144,7 @@ body {
 }
 
 .nav-links a {
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     font-weight: 600;
     font-size: 1rem; /* Slightly larger font size */
     text-decoration: none;
@@ -156,8 +155,8 @@ body {
 
 /* Hover & Active Effects */
 .nav-links a:hover {
-    color: #ff0090;
-    text-shadow: 0 0 5px #ff0090;
+    color: #38bdf8; /* Sky Blue */
+    text-shadow: 0 0 5px #38bdf8;
 }
 
 .nav-links a::after {
@@ -167,7 +166,7 @@ body {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #ff0090;
+    background-color: #38bdf8; /* Sky Blue */
     transition: width 0.3s ease;
 }
 
@@ -181,7 +180,7 @@ body {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     position: absolute;
     right: 20px;
     top: 12px;
@@ -192,7 +191,7 @@ body {
     display: block;
     width: 24px;
     height: 3px;
-    background: #0fffc1;
+    background: #4ade80; /* Neon Green */
     margin: 5px auto;
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -258,7 +257,6 @@ body {
     }
 }
 
-
 /* ================= HERO SECTION ================= */
 .hero {
     display: flex;
@@ -296,7 +294,7 @@ body {
     font-size: 2.6rem;
     font-weight: bold;
     color: #f8fafc; /* Slightly softer white */
-    text-shadow: 0 0 20px #0fffc1, 0 0 40px rgba(56, 189, 248, 0.8);
+    text-shadow: 0 0 20px #4ade80, 0 0 40px rgba(56, 189, 248, 0.8);
     animation: glowText 2s ease-in-out infinite alternate;
     line-height: 1.3;
     margin-bottom: 20px;
@@ -304,16 +302,16 @@ body {
 
 @keyframes glowText {
     0% {
-        text-shadow: 0 0 15px #0fffc1, 0 0 30px rgba(56, 189, 248, 0.6);
+        text-shadow: 0 0 15px #4ade80, 0 0 30px rgba(56, 189, 248, 0.6);
     }
     100% {
-        text-shadow: 0 0 30px #ff0090, 0 0 50px rgba(74, 222, 128, 0.8);
+        text-shadow: 0 0 30px #38bdf8, 0 0 50px rgba(74, 222, 128, 0.8);
     }
 }
 
 .hero h1 span {
-    color: #ff0090;
-    text-shadow: 0 0 20px #ff0090, 0 0 40px rgba(74, 222, 128, 0.8);
+    color: #38bdf8; /* Sky Blue */
+    text-shadow: 0 0 20px #38bdf8, 0 0 40px rgba(74, 222, 128, 0.8);
 }
 
 /* HERO SUBTEXT */
@@ -326,7 +324,7 @@ body {
 
 /* CTA BUTTON */
 .cta-button {
-    background: linear-gradient(135deg, #0fffc1, #ff0090);
+    background: linear-gradient(135deg, #4ade80, #38bdf8); /* Neon Green to Sky Blue */
     color: #fff;
     padding: 14px 40px;
     border-radius: 30px;
@@ -341,8 +339,7 @@ body {
 }
 
 .cta-button:hover {
-    background: #32a6e0;
-    color: #ffffff;
+    background: linear-gradient(135deg, #38bdf8, #4ade80); /* Sky Blue to Neon Green */
     transform: scale(1.12);
     box-shadow: 0 0 50px rgba(74, 222, 128, 0.8), 0 0 80px rgba(56, 189, 248, 0.7);
 }
@@ -410,7 +407,7 @@ body {
     .hero h1 {
         font-size: 2rem;
         line-height: 1.1;
-        text-shadow: 0 0 10px #ff0090, 0 0 20px rgba(74, 222, 128, 0.6);
+        text-shadow: 0 0 10px #38bdf8, 0 0 20px rgba(74, 222, 128, 0.6);
     }
 
     .hero p {
@@ -476,26 +473,26 @@ body {
     display: block;
     margin: 0 auto 50px;
     border-radius: 50%;
-    border: 3px solid #0fffc1;
-    box-shadow: 0 0 30px #0fffc1, 0 0 50px #ff0090;
+    border: 3px solid #4ade80; /* Neon Green */
+    box-shadow: 0 0 30px #4ade80, 0 0 50px #38bdf8; /* Neon Green and Sky Blue */
     animation: float 4s ease-in-out infinite, pulseGlow 3s infinite alternate;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-image:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 40px #ff0090, 0 0 70px #0fffc1;
+    box-shadow: 0 0 40px #38bdf8, 0 0 70px #4ade80;
 }
 
 /* Section Title */
 .about h2 {
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     font-size: 3.5rem;
     margin-bottom: 20px;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 0 0 12px #0fffc1, 0 0 25px #ff0090;
+    text-shadow: 0 0 12px #4ade80, 0 0 25px #38bdf8; /* Neon Green and Sky Blue */
     animation: neonFlicker 3s infinite alternate;
 }
 
@@ -512,21 +509,21 @@ body {
 /* Call to Action Button */
 .about .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #0fffc1, #ff0090);
+    background: linear-gradient(135deg, #4ade80, #38bdf8); /* Neon Green to Sky Blue */
     color: #000;
     padding: 14px 34px;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.2rem;
-    box-shadow: 0 0 20px #0fffc1, 0 0 40px #ff0090;
+    box-shadow: 0 0 20px #4ade80, 0 0 40px #38bdf8; /* Neon Green and Sky Blue */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .about .cta-button:hover {
     transform: translateY(-5px) scale(1.1);
-    background: linear-gradient(135deg, #ff0090, #0fffc1);
-    box-shadow: 0 0 30px #ff0090, 0 0 60px #0fffc1;
+    background: linear-gradient(135deg, #38bdf8, #4ade80); /* Sky Blue to Neon Green */
+    box-shadow: 0 0 30px #38bdf8, 0 0 60px #4ade80;
 }
 
 /* ================= CYBERPUNK ANIMATIONS ================= */
@@ -537,13 +534,13 @@ body {
 }
 
 @keyframes pulseGlow {
-    0% { box-shadow: 0 0 30px #0fffc1, 0 0 50px #ff0090; }
-    100% { box-shadow: 0 0 50px #ff0090, 0 0 80px #0fffc1; }
+    0% { box-shadow: 0 0 30px #4ade80, 0 0 50px #38bdf8; }
+    100% { box-shadow: 0 0 50px #38bdf8, 0 0 80px #4ade80; }
 }
 
 @keyframes neonFlicker {
-    0%, 100% { text-shadow: 0 0 10px #0fffc1, 0 0 30px #ff0090; }
-    50% { text-shadow: 0 0 20px #ff0090, 0 0 50px #0fffc1; }
+    0%, 100% { text-shadow: 0 0 10px #4ade80, 0 0 30px #38bdf8; }
+    50% { text-shadow: 0 0 20px #38bdf8, 0 0 50px #4ade80; }
 }
 
 @keyframes circuitFlow {
@@ -618,7 +615,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     border-bottom: 3px solid rgba(0, 234, 255, 0.8);
     display: inline-block;
     padding-bottom: 10px;
@@ -799,7 +796,7 @@ github-icon { background-image: url('images/github.gif'); }
 
 .projects {
     font-family: inherit; /* Inherit from body (Orbitron) */
-    color: inherit; /* Inherit text color (Neon Cyan) */
+    color: inherit; /* Inherit text color (Neon Green) */
     text-align: center;
     padding: 60px 30px;
     max-width: 1200px;
@@ -817,24 +814,16 @@ github-icon { background-image: url('images/github.gif'); }
 /* Project Card Styling */
 .project-card {
     background: rgba(5, 5, 20, 0.85);
-    border: 2px solid #0fffc1;
-    border-radius: 12px;
-    width: 320px;
-    height: 220px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0px 0px 12px #0fffc1, 0px 0px 22px #ff0090;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    border: 2px solid #4ade80; /* Neon Green */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #4ade80, 0px 0px 20px #38bdf8; /* Neon Green and Sky Blue */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Card Hover Effect */
 .project-card:hover {
-    transform: scale(1.07);
-    box-shadow: 0px 0px 18px #ff0090, 0px 0px 28px #0fffc1;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #38bdf8, 0px 0px 25px #4ade80;
 }
 
 /* Inner Project Card Styling */
@@ -860,7 +849,7 @@ github-icon { background-image: url('images/github.gif'); }
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -870,7 +859,7 @@ github-icon { background-image: url('images/github.gif'); }
     width: 100%;
     height: 100%;
     background: rgba(10, 10, 40, 0.95);
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     padding: 18px;
     display: flex;
     flex-direction: column;
@@ -903,19 +892,19 @@ github-icon { background-image: url('images/github.gif'); }
 
 .tech-stack span {
     background: rgba(0, 255, 193, 0.25);
-    border: 1px solid #0fffc1;
+    border: 1px solid #4ade80; /* Neon Green */
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 13px;
     font-weight: bold;
-    color: #0fffc1;
-    text-shadow: 0px 0px 6px #0fffc1, 0px 0px 12px #ff0090;
+    color: #4ade80; /* Neon Green */
+    text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8; /* Neon Green and Sky Blue */
 }
 
 /* Status Label (For WIP Projects) */
 .status-label {
     display: inline-block;
-    background: #ff0090;
+    background: #38bdf8; /* Sky Blue */
     color: #fff;
     font-size: 13px;
     font-weight: bold;
@@ -923,7 +912,7 @@ github-icon { background-image: url('images/github.gif'); }
     border-radius: 6px;
     text-transform: uppercase;
     margin-top: 6px;
-    box-shadow: 0px 0px 10px #ff0090;
+    box-shadow: 0px 0px 10px #38bdf8; /* Sky Blue */
 }
 
 /* Responsive Design */
@@ -984,7 +973,7 @@ github-icon { background-image: url('images/github.gif'); }
 .section-title {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
     font-weight: 700;
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     margin-bottom: 20px;
     border-bottom: 3px solid rgba(79, 195, 247, 0.8);
     display: inline-block;
@@ -995,8 +984,8 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 .section-title:hover {
-    color: #ff0090;
-    border-bottom-color: #ff0090;
+    color: #38bdf8; /* Sky Blue */
+    border-bottom-color: #38bdf8;
 }
 
 /* Achievements Container */
@@ -1054,7 +1043,7 @@ github-icon { background-image: url('images/github.gif'); }
 /* Front Side */
 .achievement-front {
     background: linear-gradient(135deg, #1e293b, #0f172a);
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     font-size: 1.2rem;
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -1075,7 +1064,7 @@ github-icon { background-image: url('images/github.gif'); }
 .achievement-content h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1104,7 +1093,7 @@ github-icon { background-image: url('images/github.gif'); }
 .fake-btn {
     margin-top: 12px;
     padding: 10px 15px;
-    background: #ff0090;
+    background: #38bdf8; /* Sky Blue */
     color: #222;
     font-size: 0.9rem;
     font-weight: bold;
@@ -1115,7 +1104,7 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 .fake-btn:hover {
-    background: #ff0090;
+    background: #4ade80; /* Neon Green */
     box-shadow: 0 5px 15px rgba(255, 204, 0, 0.7);
     transform: scale(1.05);
     cursor: pointer;
@@ -1193,7 +1182,7 @@ github-icon { background-image: url('images/github.gif'); }
 .section-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     margin-bottom: 40px;
     border-bottom: 5px solid rgba(79, 195, 247, 0.9);
     display: inline-block;
@@ -1287,7 +1276,7 @@ github-icon { background-image: url('images/github.gif'); }
 .institution-name {
     font-size: 2.2rem;
     font-weight: bold;
-    color: #0fffc1;
+    color: #4ade80; /* Neon Green */
     margin-bottom: 18px;
     text-align: center;
 }
@@ -1303,7 +1292,7 @@ github-icon { background-image: url('images/github.gif'); }
     padding: 24px 28px;
     background: rgba(255, 255, 255, 0.18);
     border-radius: 14px;
-    border-left: 8px solid #0fffc1;
+    border-left: 8px solid #4ade80; /* Neon Green */
     box-shadow: 0px 6px 20px rgba(79, 195, 247, 0.25);
     font-weight: 500;
 }
@@ -1318,7 +1307,7 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 .close-btn:hover {
-    color: #ff0090;
+    color: #38bdf8; /* Sky Blue */
 }
 
 /* ================= Responsive Design ================== */
@@ -1432,7 +1421,7 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 .footer-contact a:hover {
-    color: #0fffc1; /* Highlight color */
+    color: #4ade80; /* Neon Green */
     text-decoration: underline;
 }
 
