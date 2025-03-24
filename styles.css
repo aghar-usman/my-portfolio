@@ -756,18 +756,6 @@ body {
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
 }
 
-/* Skill Descriptions */
-.skill-description {
-    color: rgba(224, 247, 250, 0.8);
-    font-size: 0.9rem;
-    margin-top: 8px;
-    transition: color 0.3s ease-in-out;
-    white-space: normal;
-}
-
-.skill-item:hover .skill-description {
-    color: #ffffff;
-}
 
 /* Skill Icons */
 .skill-image {
@@ -848,9 +836,6 @@ body {
     }
     .skill-name {
         font-size: 1.1rem;
-    }
-    .skill-description {
-        font-size: 0.85rem;
     }
 }
 
