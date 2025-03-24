@@ -677,27 +677,21 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
     width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 /* Scroll Container */
 .scroll-container {
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
     white-space: nowrap;
-    max-width: 100%;
     position: relative;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Hide Scrollbar */
-.scroll-container::-webkit-scrollbar {
-    display: none;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Scroll Content */
@@ -749,21 +743,6 @@ body {
     text-shadow: 0 0 12px rgba(255, 255, 255, 1);
 }
 
-/* Skill Description */
-.skill-description {
-    color: #ffffff;
-    font-size: 0.9rem;
-    text-align: center;
-    line-height: 1.4;
-    padding: 8px;
-    height: 60px;
-    overflow: hidden;
-    word-wrap: break-word;
-    white-space: normal;
-    display: block;
-    flex-grow: 1; /* Prevents content from pushing icons away */
-}
-
 /* Skill Icons */
 .skill-image {
     height: 85px;
@@ -771,7 +750,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    flex-shrink: 0; /* Prevents icon from disappearing */
+    flex-shrink: 0;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -779,22 +758,6 @@ body {
     transform: scale(1.15);
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
 }
-
-/* Individual Skill Icons */
-.python-icon { background-image: url('images/python.png'); }
-.java-icon { background-image: url('images/java.png'); }
-.html-icon { background-image: url('images/html.png'); }
-.css-icon { background-image: url('images/css.png'); }
-.js-icon { background-image: url('images/js.png'); }
-.sql-icon { background-image: url('images/sql.png'); }
-.tensorflow-icon { background-image: url('images/tensorflow.png'); }
-.pytorch-icon { background-image: url('images/pytorch.png'); }
-.r-icon { background-image: url('images/r.png'); }
-.powerbi-icon { background-image: url('images/powerbi.png'); }
-.tableau-icon { background-image: url('images/tableau.png'); }
-.git-icon { background-image: url('images/git1.png'); }
-.github-icon { background-image: url('images/github.gif'); }
-.jup-icon { background-image: url('images/jup.png'); }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -804,19 +767,6 @@ body {
     .skill-item {
         width: 180px;
         height: 250px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .skill-name {
-        font-size: 1.2rem;
-        text-align: center;
-        min-height: 40px;
-    }
-    .skill-description {
-        font-size: 0.85rem;
-        text-align: center;
     }
 }
 
@@ -831,15 +781,6 @@ body {
         width: 160px;
         height: 220px;
     }
-    .skill-name {
-        font-size: 1.1rem;
-        text-align: center;
-        min-height: 40px;
-    }
-    .skill-description {
-        height: 50px;
-        font-size: 0.8rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -853,14 +794,6 @@ body {
         width: 140px;
         height: 200px;
         padding: 15px;
-    }
-    .skill-name {
-        font-size: 1rem;
-        text-align: center;
-        min-height: 40px;
-    }
-    .skill-description {
-        display: none; /* Hide on smaller screens */
     }
 }
 
