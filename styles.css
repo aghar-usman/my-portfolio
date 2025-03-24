@@ -625,7 +625,7 @@ body {
 
 /* Section Title */
 .section-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -635,6 +635,9 @@ body {
     padding-bottom: 10px;
     text-shadow: 0 0 10px rgba(0, 234, 255, 0.8);
     animation: fadeInDown 1s ease-in-out;
+    margin: 0 auto 40px; /* Centered with margin */
+    max-width: 90%; /* Prevents overflow */
+    line-height: 1.2; /* Better line spacing */
 }
 
 /* Scroll Wrapper */
@@ -752,9 +755,9 @@ body {
 .pytorch-icon { background-image: url('images/pytorch.png'); }
 .r-icon { background-image: url('images/r.png'); }
 .powerbi-icon { background-image: url('images/powerbi.png'); }
-tableau-icon { background-image: url('images/tableau.png'); }
+.tableau-icon { background-image: url('images/tableau.png'); }
 .git-icon { background-image: url('images/git1.png'); }
-github-icon { background-image: url('images/github.gif'); }
+.github-icon { background-image: url('images/github.gif'); }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -765,9 +768,19 @@ github-icon { background-image: url('images/github.gif'); }
         width: 190px;
         height: 260px;
     }
+    .skill-description {
+        font-size: 0.85rem; /* Adjusted font size */
+    }
 }
 
 @media (max-width: 768px) {
+    .skills-section {
+        padding: 60px 5%; /* Adjusted padding */
+    }
+    .section-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem); /* Adjusted font size */
+        padding-bottom: 8px;
+    }
     .scroll-container {
         max-width: 100%;
         overflow-x: auto;
@@ -778,10 +791,18 @@ github-icon { background-image: url('images/github.gif'); }
     }
     .skill-description {
         height: 50px;
+        font-size: 0.8rem; /* Adjusted font size */
     }
 }
 
 @media (max-width: 480px) {
+    .skills-section {
+        padding: 40px 5%; /* Adjusted padding */
+    }
+    .section-title {
+        font-size: clamp(1.5rem, 6vw, 2rem); /* Adjusted font size */
+        padding-bottom: 6px;
+    }
     .scroll-container {
         max-width: 100%;
         overflow-x: auto;
@@ -789,9 +810,13 @@ github-icon { background-image: url('images/github.gif'); }
     .skill-item {
         width: 150px;
         height: 210px;
+        padding: 15px; /* Adjusted padding */
+    }
+    .skill-name {
+        font-size: 1.2rem; /* Adjusted font size */
     }
     .skill-description {
-        display: none;
+        display: none; /* Hide description on small screens */
     }
 }
 
@@ -805,6 +830,7 @@ github-icon { background-image: url('images/github.gif'); }
     0% { opacity: 0; transform: translateY(15px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
 
 /* ================= PROJECTS SECTION ================= */
 
