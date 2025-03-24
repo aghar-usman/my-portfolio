@@ -643,7 +643,7 @@ body {
 /* =================== Tech Skills Section - Cyberpunk Theme =================== */
 .skills-section {
     background: radial-gradient(circle, rgb(10, 15, 30) 20%, rgb(3, 5, 15) 100%);
-    padding: 80px 10%;
+    padding: 80px 8%;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -663,10 +663,10 @@ body {
     color: #4ade80;
     border-bottom: 3px solid rgba(0, 234, 255, 0.8);
     display: inline-block;
-    padding-bottom: 10px;
-    text-shadow: 0 0 10px rgba(0, 234, 255, 0.8);
+    padding-bottom: 12px;
+    text-shadow: 0 0 12px rgba(0, 234, 255, 0.8);
     animation: fadeInDown 1s ease-in-out;
-    margin: 0 auto 40px;
+    margin: 0 auto 50px;
     max-width: 90%;
     line-height: 1.2;
 }
@@ -680,7 +680,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    padding: 20px 0;
+    padding: 25px 0;
     overflow: hidden;
 }
 
@@ -694,22 +694,33 @@ body {
     max-width: 100%;
 }
 
-/* Scroll Content */
+/* Scroll Content with Animation */
 .scroll-content {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     width: max-content;
-    padding: 10px 0;
+    padding: 15px 0;
     flex-wrap: nowrap;
+    animation: scrollAnimation 20s linear infinite;
+}
+
+/* Smooth Infinite Scroll Animation */
+@keyframes scrollAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 /* Skill Card */
 .skill-item {
-    width: 220px;
-    height: 280px;
+    width: 200px;
+    height: 260px;
     background: linear-gradient(135deg, rgb(20, 25, 40), rgb(10, 15, 30));
     border-radius: 15px;
-    padding: 20px;
+    padding: 18px;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 234, 255, 0.3);
     display: flex;
@@ -725,15 +736,15 @@ body {
 .skill-item:hover {
     background: linear-gradient(135deg, #004aad, #00ff99);
     box-shadow: 0 0 40px rgba(0, 255, 153, 0.8), 0 0 60px rgba(0, 255, 153, 0.5);
-    transform: translateY(-10px) scale(1.07);
+    transform: translateY(-8px) scale(1.05);
 }
 
 /* Skill Name */
 .skill-name {
     color: #e0f7fa;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 12px;
+    margin-top: 10px;
     transition: color 0.3s ease-in-out;
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
 }
@@ -745,8 +756,8 @@ body {
 
 /* Skill Icons */
 .skill-image {
-    height: 85px;
-    width: 85px;
+    height: 80px;
+    width: 80px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -755,18 +766,34 @@ body {
 }
 
 .skill-item:hover .skill-image {
-    transform: scale(1.15);
+    transform: scale(1.12);
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
 }
+
+/* Individual Skill Icons */
+.python-icon { background-image: url('images/python.png'); }
+.java-icon { background-image: url('images/java.png'); }
+.html-icon { background-image: url('images/html.png'); }
+.css-icon { background-image: url('images/css.png'); }
+.js-icon { background-image: url('images/js.png'); }
+.sql-icon { background-image: url('images/sql.png'); }
+.tensorflow-icon { background-image: url('images/tensorflow.png'); }
+.pytorch-icon { background-image: url('images/pytorch.png'); }
+.r-icon { background-image: url('images/r.png'); }
+.powerbi-icon { background-image: url('images/powerbi.png'); }
+.tableau-icon { background-image: url('images/tableau.png'); }
+.git-icon { background-image: url('images/git1.png'); }
+.github-icon { background-image: url('images/github.gif'); }
+.jup-icon { background-image: url('images/jup.png'); }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .scroll-container {
-        max-width: 95%;
+        max-width: 90%;
     }
     .skill-item {
         width: 180px;
-        height: 250px;
+        height: 240px;
     }
 }
 
@@ -793,11 +820,9 @@ body {
     .skill-item {
         width: 140px;
         height: 200px;
-        padding: 15px;
+        padding: 12px;
     }
 }
-
-
 
 /* ================= PROJECTS SECTION ================= */
 .projects {
