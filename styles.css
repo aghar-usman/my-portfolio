@@ -456,10 +456,13 @@ body {
 /* ================= CYBERPUNK ABOUT SECTION ================= */
 .about {
     background: radial-gradient(circle, rgb(10, 15, 40) 10%, rgb(5, 5, 20) 90%);
-    padding: 100px 10%;
+    padding: 100px 8%;
     text-align: center;
     position: relative;
     overflow: hidden;
+    max-width: 1200px; /* Constrain width on larger screens */
+    margin: auto; /* Center the section */
+    border-radius: 10px; /* Subtle rounding for a premium feel */
 }
 
 /* Background Overlay - Digital Circuit Effect */
@@ -483,12 +486,12 @@ body {
 /* Profile Image */
 .about-image {
     width: 100%;
-    max-width: 280px;
+    max-width: 250px; /* Balanced size for both desktop and mobile */
     display: block;
-    margin: 0 auto 50px;
+    margin: 0 auto 40px;
     border-radius: 50%;
     border: 3px solid #4ade80; /* Neon Green */
-    box-shadow: 0 0 30px #4ade80, 0 0 50px #38bdf8; /* Neon Green and Sky Blue */
+    box-shadow: 0 0 30px #4ade80, 0 0 50px #38bdf8; /* Neon Glow Effect */
     animation: float 4s ease-in-out infinite, pulseGlow 3s infinite alternate;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -501,21 +504,21 @@ body {
 /* Section Title */
 .about h2 {
     color: #4ade80; /* Neon Green */
-    font-size: 3.5rem;
+    font-size: 3.2rem; /* Balanced size */
     margin-bottom: 20px;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 0 0 12px #4ade80, 0 0 25px #38bdf8; /* Neon Green and Sky Blue */
+    text-shadow: 0 0 12px #4ade80, 0 0 25px #38bdf8;
     animation: neonFlicker 3s infinite alternate;
 }
 
 /* About Description */
 .about p {
     color: #cbd5e1;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 2;
-    max-width: 850px;
+    max-width: 750px;
     margin: 0 auto 40px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
@@ -525,18 +528,18 @@ body {
     display: inline-block;
     background: linear-gradient(135deg, #4ade80, #38bdf8); /* Neon Green to Sky Blue */
     color: #000;
-    padding: 14px 34px;
+    padding: 12px 30px;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 0 0 20px #4ade80, 0 0 40px #38bdf8; /* Neon Green and Sky Blue */
+    font-size: 1.1rem;
+    box-shadow: 0 0 20px #4ade80, 0 0 40px #38bdf8;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .about .cta-button:hover {
     transform: translateY(-5px) scale(1.1);
-    background: linear-gradient(135deg, #38bdf8, #4ade80); /* Sky Blue to Neon Green */
+    background: linear-gradient(135deg, #38bdf8, #4ade80);
     box-shadow: 0 0 30px #38bdf8, 0 0 60px #4ade80;
 }
 
@@ -563,13 +566,39 @@ body {
 }
 
 /* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .about {
+        padding: 80px 5%;
+    }
+
+    .about h2 {
+        font-size: 3rem;
+    }
+
+    .about p {
+        font-size: 1.2rem;
+        max-width: 700px;
+    }
+
+    .about .cta-button {
+        padding: 10px 26px;
+    }
+
+    .about-image {
+        max-width: 220px;
+    }
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
     .about {
         padding: 70px 6%;
     }
 
     .about h2 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .about p {
@@ -582,10 +611,11 @@ body {
     }
 
     .about-image {
-        max-width: 250px;
+        max-width: 230px;
     }
 }
 
+/* Small Mobile View */
 @media (max-width: 480px) {
     .about {
         padding: 60px 5%;
@@ -605,9 +635,10 @@ body {
     }
 
     .about-image {
-        max-width: 220px;
+        max-width: 200px;
     }
 }
+
 
 /* =================== Tech Skills Section - Cyberpunk Theme =================== */
 .skills-section {
@@ -894,7 +925,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #4ade80;
     padding: 20px;
@@ -910,7 +941,7 @@ body {
     height: 100%;
     background: rgba(10, 10, 40, 0.95);
     color: #4ade80;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -932,15 +963,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .tech-stack span {
     background: rgba(0, 255, 193, 0.25);
     border: 1px solid #4ade80;
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: bold;
     color: #4ade80;
     text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8;
@@ -951,12 +982,12 @@ body {
     display: inline-block;
     background: #38bdf8;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: bold;
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 8px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 8px;
     box-shadow: 0px 0px 10px #38bdf8;
 }
 
@@ -976,12 +1007,19 @@ body {
     .projects-container {
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
     }
     .project-card {
         width: 100%;
         max-width: 320px;
-        height: 280px;
+        height: 270px;
+    }
+    .project-front {
+        font-size: 1.3rem;
+    }
+    .project-back {
+        font-size: 0.95rem;
+        padding: 14px;
     }
 }
 
@@ -990,18 +1028,27 @@ body {
         padding: 40px 15px;
     }
     .projects-container {
-        gap: 20px;
+        gap: 15px;
     }
     .project-card {
-        max-width: 280px;
-        height: 260px;
+        max-width: 270px;
+        height: 250px;
     }
     .project-front {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+        padding: 15px;
     }
     .project-back {
-        font-size: 0.9rem;
-        padding: 15px;
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+    .tech-stack span {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    .status-label {
+        font-size: 0.8rem;
+        padding: 5px 8px;
     }
 }
 
