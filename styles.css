@@ -1271,28 +1271,28 @@ body {
 /*================== Experience Section ==================*/
 .experience {
     text-align: center;
-    padding: 80px 8%; /* Adjusted padding for better spacing */
+    padding: 80px 8%;
     background: radial-gradient(circle, rgb(20, 30, 50) 20%, #060912 100%);
     color: #ffffff;
 }
 
 /* Section Title */
 .section-title {
-    font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 700;
     color: #4ade80; /* Neon Green */
     margin-bottom: 40px;
     border-bottom: 5px solid rgba(79, 195, 247, 0.9);
     display: inline-block;
     padding-bottom: 12px;
-    line-height: 1.2; /* Improved line height */
+    line-height: 1.2;
 }
 
 /* Track (Container for Planets) */
 .track {
     display: flex;
     justify-content: center;
-    gap: 60px; /* Adjusted gap for better spacing */
+    gap: 60px;
     margin-top: 40px;
     flex-wrap: wrap;
 }
@@ -1321,10 +1321,10 @@ body {
 
 /* Ensure logos inside planets scale properly */
 .planet-circle img {
-    width: 80%; /* Adjusted to fit logos properly */
-    height: 80%; /* Adjusted to fit logos properly */
-    object-fit: contain; /* Ensures the logo is fully visible */
-    padding: 10px; /* Added padding for better spacing */
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    padding: 10px;
 }
 
 /* Hover Effects */
@@ -1350,10 +1350,10 @@ body {
     transform: translate(-50%, -50%) scale(0.95);
     background: rgba(15, 23, 42, 0.98);
     color: white;
-    padding: 50px; /* Increased padding for better spacing */
-    border-radius: 30px;
+    padding: 40px;
+    border-radius: 24px;
     width: 95%;
-    max-width: 900px;
+    max-width: 850px;
     text-align: center;
     z-index: 1000;
     box-shadow: 0 18px 50px rgba(79, 195, 247, 0.7);
@@ -1372,25 +1372,25 @@ body {
 
 /* Institution Title */
 .institution-name {
-    font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     font-weight: bold;
-    color: #4ade80; /* Neon Green */
-    margin-bottom: 20px;
+    color: #4ade80;
+    margin-bottom: 16px;
     text-align: center;
 }
 
 /* Institution Description */
 .institution-description {
-    font-size: clamp(1.2rem, 4vw, 1.6rem); /* Responsive font size */
+    font-size: clamp(1rem, 4vw, 1.4rem);
     color: #ffffff;
-    line-height: 1.8; /* Improved line height for readability */
+    line-height: 1.6;
     width: 100%;
     max-width: 750px;
     text-align: left;
-    padding: 25px; /* Increased padding for better spacing */
+    padding: 20px;
     background: rgba(255, 255, 255, 0.18);
     border-radius: 16px;
-    border-left: 10px solid #4ade80; /* Neon Green */
+    border-left: 8px solid #4ade80;
     box-shadow: 0px 6px 25px rgba(79, 195, 247, 0.3);
     font-weight: 500;
 }
@@ -1398,18 +1398,23 @@ body {
 /* Close Button */
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 24px;
-    font-size: 34px;
+    top: 12px;
+    right: 16px;
+    font-size: 28px;
     cursor: pointer;
     color: #ffffff;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background 0.2s ease-in-out;
 }
 
 .close-btn:hover {
-    color: #38bdf8; /* Sky Blue */
+    color: #38bdf8;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-/* ================= Responsive Design ================== */
+/* ================= Improved Responsive Design ================== */
 
 /* Tablets */
 @media (max-width: 1024px) {
@@ -1418,18 +1423,18 @@ body {
     }
 
     .planet {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
 
     .details-box {
-        padding: 40px;
-        max-width: 850px;
+        padding: 32px;
+        max-width: 90%;
     }
 
     .institution-description {
-        font-size: 1.4rem;
-        padding: 22px;
+        font-size: 1.2rem;
+        padding: 18px;
     }
 }
 
@@ -1440,23 +1445,29 @@ body {
     }
 
     .track {
-        gap: 40px;
+        gap: 30px;
     }
 
     .planet {
-        width: 140px;
-        height: 140px;
+        width: 130px;
+        height: 130px;
     }
 
     .details-box {
-        padding: 30px;
-        max-width: 700px;
+        padding: 28px;
+        max-width: 90%;
     }
 
     .institution-description {
-        font-size: 1.3rem;
-        line-height: 1.7;
-        padding: 20px;
+        font-size: 1.1rem;
+        padding: 16px;
+        line-height: 1.5;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        top: 10px;
+        right: 12px;
     }
 }
 
@@ -1467,25 +1478,36 @@ body {
     }
 
     .track {
-        gap: 30px;
+        gap: 20px;
     }
 
     .planet {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
     }
 
     .details-box {
-        padding: 25px;
-        max-width: 90%;
+        padding: 24px;
+        max-width: 92%;
+    }
+
+    .institution-name {
+        font-size: 1.5rem;
     }
 
     .institution-description {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        padding: 18px;
+        font-size: 1rem;
+        padding: 14px;
+        line-height: 1.4;
+    }
+
+    .close-btn {
+        font-size: 22px;
+        top: 8px;
+        right: 10px;
     }
 }
+
 
 
 /* ========== FOOTER ========== */
