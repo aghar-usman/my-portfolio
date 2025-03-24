@@ -864,173 +864,182 @@ body {
 
 
 /* ================= PROJECTS SECTION ================= */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #4ade80;
-  text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8;
-  margin-bottom: 20px;
+.projects {
+    background: rgba(10, 15, 29, 0.9);
+    padding: 60px 6%;
+    text-align: center;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4ade80;
+    text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Project Cards Container */
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-  padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    padding: 40px 20px;
 }
 
 /* Project Card Styling */
 .project-card {
-  background: rgba(5, 5, 20, 0.9);
-  border: 2px solid #4ade80;
-  border-radius: 16px;
-  box-shadow: 0px 0px 15px #4ade80, 0px 0px 25px #38bdf8;
-  width: 340px;
-  height: 320px;
-  position: relative;
-  perspective: 1300px;
-  transform-style: preserve-3d;
-  transition: transform 0.75s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
+    background: rgba(2, 8, 23, 0.95);
+    border: 2px solid rgba(56, 189, 248, 0.5);
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px #4ade80, 0px 0px 25px #38bdf8;
+    width: 340px;
+    height: 320px;
+    position: relative;
+    perspective: 1300px;
+    transform-style: preserve-3d;
+    transition: transform 0.75s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .project-card:hover {
-  box-shadow: 0px 0px 20px #4ade80, 0px 0px 30px #38bdf8;
+    box-shadow: 0px 0px 20px #4ade80, 0px 0px 30px #38bdf8;
 }
 
-/* Apply rotation when 'flipped' class is added */
+/* Flip Effect */
 .project-card.flipped {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-/* Inner Project Card Styling */
+/* Inner Project Card */
 .project-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
 }
 
-/* Project Front & Back Sides */
+/* Front & Back Sides */
 .project-front,
 .project-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(5, 5, 20, 0.95);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #4ade80;
-  padding: 24px;
-  backface-visibility: hidden;
-  border-radius: 16px;
-  transition: background 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 8, 23, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4ade80;
+    padding: 24px;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    transition: background 0.3s ease-in-out;
 }
 
 .project-front h3 {
-  margin: 0;
-  font-size: 1.8rem;
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 .project-back {
-  background: rgba(10, 10, 40, 0.97);
-  color: #4ade80;
-  transform: rotateY(180deg);
-  font-size: 1.1rem;
-  padding: 20px;
+    background: rgba(10, 15, 29, 0.97);
+    color: #4ade80;
+    transform: rotateY(180deg);
+    font-size: 1.1rem;
+    padding: 20px;
 }
 
 .project-back p {
-  margin-bottom: 14px;
-  font-size: 1.05rem;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
 }
 
 /* Technology Stack */
 .tech-stack {
-  margin-top: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .tech-stack span {
-  background: rgba(0, 255, 193, 0.3);
-  border: 1px solid #4ade80;
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #4ade80;
-  text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8;
+    background: rgba(0, 255, 193, 0.3);
+    border: 1px solid #4ade80;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #4ade80;
+    text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8;
 }
 
 /* Status Label */
 .status-label {
-  background: #38bdf8;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 8px 14px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  margin-top: 12px;
-  box-shadow: 0px 0px 12px #38bdf8;
+    background: #38bdf8;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    box-shadow: 0px 0px 12px #38bdf8;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .projects-container {
-    gap: 30px;
-    padding: 30px 15px;
-  }
+    .projects-container {
+        gap: 30px;
+        padding: 30px 15px;
+    }
   
-  .project-card {
-    width: 300px;
-    height: 280px;
-  }
+    .project-card {
+        width: 300px;
+        height: 280px;
+    }
 }
 
 @media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
   
-  .project-card {
-    width: 90%;
-    max-width: 330px;
-    height: 300px;
-  }
+    .project-card {
+        width: 90%;
+        max-width: 330px;
+        height: 300px;
+    }
 }
 
 @media (max-width: 480px) {
-  .projects-container {
-    gap: 20px;
-  }
+    .projects-container {
+        gap: 20px;
+    }
   
-  .project-card {
-    max-width: 300px;
-    height: 280px;
-  }
+    .project-card {
+        max-width: 300px;
+        height: 280px;
+    }
 
-  .project-front,
-  .project-back {
-    font-size: 1.2rem;
-    padding: 18px;
-  }
+    .project-front,
+    .project-back {
+        font-size: 1.2rem;
+        padding: 18px;
+    }
 
-  .project-back {
-    font-size: 1rem;
-  }
+    .project-back {
+        font-size: 1rem;
+    }
 }
 
 /*================== Achievements Section ==================*/
