@@ -786,6 +786,13 @@ body {
         width: 180px;
         height: 250px;
     }
+    .skill-name {
+        font-size: 1.2rem;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
     .skill-description {
         font-size: 0.85rem;
     }
@@ -804,6 +811,10 @@ body {
     }
     .skill-name {
         font-size: 1.1rem;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .skill-description {
         height: 50px;
@@ -825,11 +836,16 @@ body {
     }
     .skill-name {
         font-size: 1rem;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .skill-description {
         display: none; /* Hide on smaller screens */
     }
 }
+
 
 /* Animations */
 @keyframes fadeInDown {
