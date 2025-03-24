@@ -666,9 +666,7 @@ body {
     display: inline-block;
     padding-bottom: 8px;
     text-shadow: 0 0 12px rgba(0, 234, 255, 0.5);
-    margin: 0 auto 30px;
-    max-width: 90%;
-    line-height: 1.2;
+    margin-bottom: 30px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -697,7 +695,6 @@ body {
     white-space: nowrap;
     position: relative;
     width: 100%;
-    max-width: 100%;
 }
 
 /* Scroll Content with Animation */
@@ -710,7 +707,6 @@ body {
     animation: scrollAnimation 20s linear infinite;
 }
 
-/* Smooth Infinite Scroll Animation */
 @keyframes scrollAnimation {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -734,7 +730,6 @@ body {
     border: 1px solid rgba(79, 195, 247, 0.2);
 }
 
-/* Hover Effects */
 .skill-item:hover {
     background: linear-gradient(135deg, #3b82f6, #4ade80);
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
@@ -755,7 +750,6 @@ body {
     color: #ffffff;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
 }
-
 
 /* Skill Icons */
 .skill-image {
