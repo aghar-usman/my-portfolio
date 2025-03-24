@@ -789,117 +789,135 @@ github-icon { background-image: url('images/github.gif'); }
 }
 
 
-/* =================== Projects Section =================== */
+/* ================= PROJECTS SECTION ================= */
+
 .projects {
-    background: radial-gradient(circle, rgb(17, 24, 39) 20%, #060912 100%);
-    padding: 80px 10%;
+    font-family: inherit; /* Inherit from body (Orbitron) */
+    color: inherit; /* Inherit text color (Neon Cyan) */
     text-align: center;
-    position: relative;
-    overflow: hidden;
-    animation: fadeInUp 1s ease-in-out;
+    padding: 40px 20px;
 }
 
-.projects * {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #4fc3f7;
-    border-bottom: 3px solid rgba(79, 195, 247, 0.8);
-    display: inline-block;
-    padding-bottom: 10px;
-    animation: fadeInDown 1s ease-in-out;
-}
-
-/* Projects Container */
 .projects-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Project Card */
+/* Project Card Styling */
 .project-card {
+    background: rgba(5, 5, 20, 0.8);
+    border: 2px solid #0fffc1;
+    border-radius: 10px;
     width: 300px;
-    height: 380px;
-    perspective: 1000px;
-    flex: 1 1 300px;
-    max-width: 300px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px #0fffc1, 0px 0px 20px #ff0090;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Card Hover Effect */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #ff0090, 0px 0px 25px #0fffc1;
+}
+
+/* Inner Project Card Styling */
 .project-inner {
     width: 100%;
     height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
-.project-card:hover .project-inner {
-    transform: rotateY(180deg);
-}
-
-.project-front, .project-back {
+/* Project Front Side */
+.project-front {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
-    border-radius: 15px;
-    box-shadow: 0 6px 35px rgba(0, 255, 255, 0.35);
-    backface-visibility: hidden;
+    background: rgba(5, 5, 20, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex-direction: column;
-    padding: 20px;
-    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0fffc1;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.project-front {
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    color: #e2e8f0;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
+/* Project Back Side (Hidden by Default) */
 .project-back {
-    background: linear-gradient(135deg, #3b82f6, #4ade80);
-    color: #ffffff;
-    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 40, 0.95);
+    color: #0fffc1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    font-size: 14px;
+    font-family: inherit; /* Ensures font consistency */
 }
 
+/* Reveal Back Side on Hover */
+.project-card:hover .project-front {
+    opacity: 0;
+}
+
+.project-card:hover .project-back {
+    opacity: 1;
+}
+
+/* Technology Stack */
 .tech-stack {
     margin-top: 10px;
     display: flex;
-    gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 5px;
 }
 
 .tech-stack span {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 255, 193, 0.2);
+    border: 1px solid #0fffc1;
     padding: 5px 10px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0fffc1;
+    text-shadow: 0px 0px 5px #0fffc1, 0px 0px 10px #ff0090;
 }
+
+/* Status Label (For WIP Projects) */
 .status-label {
     display: inline-block;
-    background-color: #ff9800;
-    color: white;
-    font-size: 0.8em;
+    background: #ff0090;
+    color: #fff;
+    font-size: 12px;
     font-weight: bold;
-    padding: 4px 8px;
+    padding: 5px 8px;
     border-radius: 5px;
+    text-transform: uppercase;
     margin-top: 5px;
+    box-shadow: 0px 0px 8px #ff0090;
 }
+
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .projects-container {
