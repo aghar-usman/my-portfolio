@@ -869,22 +869,26 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 35px;
-  padding: 25px;
+  padding: 40px 20px;
 }
 
 /* Project Card Styling */
 .project-card {
   background: rgba(5, 5, 20, 0.9);
   border: 2px solid #4ade80;
-  border-radius: 14px;
-  box-shadow: 0px 0px 12px #4ade80, 0px 0px 22px #38bdf8;
-  width: 320px;
-  height: 300px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 15px #4ade80, 0px 0px 25px #38bdf8;
+  width: 340px;
+  height: 320px;
   position: relative;
   perspective: 1300px;
   transform-style: preserve-3d;
-  transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.project-card:hover {
+  box-shadow: 0px 0px 20px #4ade80, 0px 0px 30px #38bdf8;
 }
 
 /* Apply rotation when 'flipped' class is added */
@@ -915,32 +919,33 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   color: #4ade80;
-  padding: 22px;
+  padding: 24px;
   backface-visibility: hidden;
-  border-radius: 14px;
+  border-radius: 16px;
+  transition: background 0.3s ease-in-out;
 }
 
 .project-front h3 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .project-back {
   background: rgba(10, 10, 40, 0.97);
   color: #4ade80;
   transform: rotateY(180deg);
-  font-size: 1rem;
-  padding: 18px;
+  font-size: 1.1rem;
+  padding: 20px;
 }
 
 .project-back p {
-  margin: 0 0 12px 0;
-  font-size: 1rem;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
 }
 
 /* Technology Stack */
 .tech-stack {
-  margin-top: 10px;
+  margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -950,9 +955,9 @@ body {
 .tech-stack span {
   background: rgba(0, 255, 193, 0.3);
   border: 1px solid #4ade80;
-  padding: 7px 14px;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
   font-weight: bold;
   color: #4ade80;
   text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8;
@@ -964,53 +969,60 @@ body {
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
-  padding: 7px 12px;
-  border-radius: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
   text-transform: uppercase;
-  margin-top: 10px;
-  box-shadow: 0px 0px 10px #38bdf8;
+  margin-top: 12px;
+  box-shadow: 0px 0px 12px #38bdf8;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-container {
+    gap: 30px;
+    padding: 30px 15px;
+  }
+  
+  .project-card {
+    width: 300px;
+    height: 280px;
+  }
+}
+
 @media (max-width: 768px) {
   .projects-container {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
   }
-
+  
   .project-card {
-    width: 100%;
+    width: 90%;
     max-width: 330px;
     height: 300px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects {
-    padding: 45px 18px;
-  }
-
   .projects-container {
-    gap: 22px;
+    gap: 20px;
   }
-
+  
   .project-card {
-    max-width: 290px;
+    max-width: 300px;
     height: 280px;
   }
 
   .project-front,
   .project-back {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 18px;
   }
 
   .project-back {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
-
 
 /*================== Achievements Section ==================*/
 .achievements {
