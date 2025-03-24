@@ -798,9 +798,16 @@ github-icon { background-image: url('images/github.gif'); }
     font-family: inherit; /* Inherit from body (Orbitron) */
     color: inherit; /* Inherit text color (Neon Green) */
     text-align: center;
-    padding: 60px 30px;
+    padding: 80px 30px; /* Increased padding for better spacing */
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.projects .section-title {
+    font-size: 2.5rem; /* Larger title for emphasis */
+    margin-bottom: 40px; /* Added spacing below the title */
+    color: #4ade80; /* Neon Green */
+    text-shadow: 0px 0px 10px #4ade80, 0px 0px 20px #38bdf8; /* Neon Green and Sky Blue */
 }
 
 .projects-container {
@@ -815,10 +822,14 @@ github-icon { background-image: url('images/github.gif'); }
 .project-card {
     background: rgba(5, 5, 20, 0.85);
     border: 2px solid #4ade80; /* Neon Green */
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px; /* Increased padding for better spacing */
+    border-radius: 12px; /* Slightly larger border radius */
     box-shadow: 0px 0px 10px #4ade80, 0px 0px 20px #38bdf8; /* Neon Green and Sky Blue */
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 300px; /* Fixed width for consistency */
+    height: 280px; /* Fixed height for consistency */
+    position: relative;
+    overflow: hidden; /* Ensures content stays within the card */
 }
 
 .project-card:hover {
@@ -834,7 +845,7 @@ github-icon { background-image: url('images/github.gif'); }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    padding: 15px; /* Adjusted padding */
 }
 
 /* Project Front Side */
@@ -844,13 +855,20 @@ github-icon { background-image: url('images/github.gif'); }
     height: 100%;
     background: rgba(5, 5, 20, 0.9);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.5rem; /* Larger font size for emphasis */
     font-weight: bold;
     color: #4ade80; /* Neon Green */
     transition: opacity 0.3s ease-in-out;
+    padding: 20px; /* Added padding */
+}
+
+.project-front h3 {
+    margin: 0;
+    font-size: 1.5rem; /* Consistent font size */
 }
 
 /* Project Back Side (Hidden by Default) */
@@ -860,7 +878,7 @@ github-icon { background-image: url('images/github.gif'); }
     height: 100%;
     background: rgba(10, 10, 40, 0.95);
     color: #4ade80; /* Neon Green */
-    padding: 18px;
+    padding: 20px; /* Adjusted padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -868,8 +886,13 @@ github-icon { background-image: url('images/github.gif'); }
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     text-align: center;
-    font-size: 15px;
+    font-size: 1rem; /* Adjusted font size */
     font-family: inherit; /* Ensures font consistency */
+}
+
+.project-back p {
+    margin: 0 0 15px 0; /* Added margin for spacing */
+    font-size: 1rem; /* Consistent font size */
 }
 
 /* Reveal Back Side on Hover */
@@ -883,19 +906,19 @@ github-icon { background-image: url('images/github.gif'); }
 
 /* Technology Stack */
 .tech-stack {
-    margin-top: 12px;
+    margin-top: 15px; /* Increased margin for spacing */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 10px; /* Increased gap for better spacing */
 }
 
 .tech-stack span {
     background: rgba(0, 255, 193, 0.25);
     border: 1px solid #4ade80; /* Neon Green */
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 13px;
+    padding: 8px 16px; /* Increased padding for better readability */
+    border-radius: 8px; /* Slightly larger border radius */
+    font-size: 0.9rem; /* Adjusted font size */
     font-weight: bold;
     color: #4ade80; /* Neon Green */
     text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8; /* Neon Green and Sky Blue */
@@ -906,12 +929,12 @@ github-icon { background-image: url('images/github.gif'); }
     display: inline-block;
     background: #38bdf8; /* Sky Blue */
     color: #fff;
-    font-size: 13px;
+    font-size: 0.9rem; /* Adjusted font size */
     font-weight: bold;
-    padding: 6px 10px;
-    border-radius: 6px;
+    padding: 8px 12px; /* Increased padding */
+    border-radius: 8px; /* Slightly larger border radius */
     text-transform: uppercase;
-    margin-top: 6px;
+    margin-top: 10px; /* Added margin for spacing */
     box-shadow: 0px 0px 10px #38bdf8; /* Sky Blue */
 }
 
@@ -923,7 +946,7 @@ github-icon { background-image: url('images/github.gif'); }
     .project-card {
         flex: 1 1 300px;
         max-width: 300px;
-        height: 240px;
+        height: 260px; /* Adjusted height */
     }
 }
 
@@ -936,7 +959,7 @@ github-icon { background-image: url('images/github.gif'); }
     .project-card {
         width: 100%;
         max-width: 320px;
-        height: 260px;
+        height: 280px; /* Adjusted height */
     }
 }
 
@@ -949,14 +972,14 @@ github-icon { background-image: url('images/github.gif'); }
     }
     .project-card {
         max-width: 280px;
-        height: 250px;
+        height: 260px; /* Adjusted height */
     }
     .project-front {
-        font-size: 18px;
+        font-size: 1.25rem; /* Adjusted font size */
     }
     .project-back {
-        font-size: 14px;
-        padding: 12px;
+        font-size: 0.9rem; /* Adjusted font size */
+        padding: 15px; /* Adjusted padding */
     }
 }
 
