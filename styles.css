@@ -874,37 +874,39 @@ body {
 }
 
 .projects .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2.8rem;
+    margin-bottom: 45px;
     color: #4ade80;
-    text-shadow: 0px 0px 10px #4ade80, 0px 0px 20px #38bdf8;
+    text-shadow: 0px 0px 12px #4ade80, 0px 0px 22px #38bdf8;
 }
 
+/* Project Container */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    padding: 20px;
+    gap: 35px;
+    padding: 25px;
 }
 
 /* Project Card Styling */
 .project-card {
-    background: rgba(5, 5, 20, 0.85);
+    background: rgba(5, 5, 20, 0.9);
     border: 2px solid #4ade80;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px #4ade80, 0px 0px 20px #38bdf8;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 300px;
-    height: 280px;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 12px #4ade80, 0px 0px 22px #38bdf8;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    width: 320px;
+    height: 300px;
     position: relative;
     overflow: hidden;
+    perspective: 1300px;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px #38bdf8, 0px 0px 25px #4ade80;
+    transform: scale(1.06);
+    box-shadow: 0px 0px 18px #38bdf8, 0px 0px 28px #4ade80;
 }
 
 /* Inner Project Card Styling */
@@ -912,6 +914,12 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.75s ease-in-out;
+}
+
+.project-card:hover .project-inner {
+    transform: rotateY(180deg);
 }
 
 /* Project Front Side */
@@ -919,76 +927,92 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(5, 5, 20, 0.9);
+    background: rgba(5, 5, 20, 0.95);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #4ade80;
-    padding: 20px;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+    padding: 22px;
+    backface-visibility: hidden;
 }
 
-/* Project Back Side (Sliding Effect) */
+.project-front h3 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* Project Back Side */
 .project-back {
     position: absolute;
-    bottom: -100%;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 10, 40, 0.95);
+    background: rgba(10, 10, 40, 0.97);
     color: #4ade80;
-    padding: 15px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: bottom 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
     text-align: center;
+    font-size: 1rem;
+    font-family: inherit;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.project-back p {
+    margin: 0 0 18px 0;
     font-size: 1rem;
 }
 
+/* Reveal Back Side on Hover */
+.project-card:hover .project-front {
+    opacity: 0;
+}
+
 .project-card:hover .project-back {
-    bottom: 0;
     opacity: 1;
 }
 
 /* Technology Stack */
 .tech-stack {
-    margin-top: 15px;
+    margin-top: 18px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
 }
 
 .tech-stack span {
-    background: rgba(0, 255, 193, 0.25);
+    background: rgba(0, 255, 193, 0.3);
     border: 1px solid #4ade80;
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-size: 0.85rem;
+    padding: 9px 18px;
+    border-radius: 10px;
+    font-size: 1rem;
     font-weight: bold;
     color: #4ade80;
-    text-shadow: 0px 0px 6px #4ade80, 0px 0px 12px #38bdf8;
+    text-shadow: 0px 0px 8px #4ade80, 0px 0px 14px #38bdf8;
 }
 
-/* Status Label (For WIP Projects) */
+/* Status Label */
 .status-label {
     display: inline-block;
     background: #38bdf8;
     color: #fff;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 6px 10px;
-    border-radius: 8px;
+    padding: 9px 14px;
+    border-radius: 10px;
     text-transform: uppercase;
-    margin-top: 8px;
-    box-shadow: 0px 0px 10px #38bdf8;
+    margin-top: 12px;
+    box-shadow: 0px 0px 12px #38bdf8;
 }
 
 /* Responsive Design */
@@ -998,8 +1022,8 @@ body {
     }
     .project-card {
         flex: 1 1 300px;
-        max-width: 300px;
-        height: 260px;
+        max-width: 320px;
+        height: 280px;
     }
 }
 
@@ -1007,48 +1031,32 @@ body {
     .projects-container {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
     }
     .project-card {
         width: 100%;
-        max-width: 320px;
-        height: 270px;
+        max-width: 330px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects {
+        padding: 45px 18px;
+    }
+    .projects-container {
+        gap: 22px;
+    }
+    .project-card {
+        max-width: 290px;
+        height: 280px;
     }
     .project-front {
         font-size: 1.3rem;
     }
     .project-back {
         font-size: 0.95rem;
-        padding: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .projects {
-        padding: 40px 15px;
-    }
-    .projects-container {
-        gap: 15px;
-    }
-    .project-card {
-        max-width: 270px;
-        height: 250px;
-    }
-    .project-front {
-        font-size: 1.2rem;
-        padding: 15px;
-    }
-    .project-back {
-        font-size: 0.85rem;
-        padding: 12px;
-    }
-    .tech-stack span {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-    }
-    .status-label {
-        font-size: 0.8rem;
-        padding: 5px 8px;
+        padding: 18px;
     }
 }
 
