@@ -97,7 +97,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 8px 6%; /* Reduced padding */
+    padding: 10px 6%;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(56, 189, 248, 0.5);
@@ -107,11 +107,10 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* Shrink navbar on scroll */
 .navbar.scrolled {
     background: rgba(2, 8, 23, 0.95);
     box-shadow: 0 1px 4px rgba(56, 189, 248, 0.2);
-    padding: 6px 6%; /* Adjusted for a smaller size */
+    padding: 8px 6%;
 }
 
 /* ===== Logo Styling ===== */
@@ -121,7 +120,7 @@ body {
 }
 
 .navbar-logo img {
-    width: 75px; /* Reduced logo size */
+    width: 75px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -140,17 +139,20 @@ body {
 }
 
 .nav-links li {
-    margin: 0 14px; /* Adjusted spacing between links */
+    margin: 0 14px;
 }
 
 .nav-links a {
     color: #4ade80;
     font-weight: 600;
-    font-size: 0.95rem; /* Slightly smaller font */
+    font-size: 1rem;
     text-decoration: none;
-    padding: 4px 0; /* Adjusted padding */
+    padding: 10px 0;
     position: relative;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
 }
 
 /* Hover & Active Effects */
@@ -175,11 +177,47 @@ body {
     width: 100%;
 }
 
+/* ===== Download Resume Button (Font Matches Nav Links) ===== */
+.download-btn {
+    background: linear-gradient(90deg, #4ade80, #4ade80);
+    color: #0a0f1d;
+    font-family: 'Orbitron', sans-serif !important;
+    font-weight: 600; /* Same as navbar links */
+    font-size: 1rem; /* Same as navbar links */
+    text-decoration: none;
+    text-transform: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.8), 0 0 16px rgba(74, 222, 128, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    line-height: 42px;
+    margin-left: auto;
+}
+
+/* Hover effect: Change to Blue */
+.download-btn:hover {
+    background: linear-gradient(90deg, #38bdf8, #38bdf8);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 1), 0 0 18px rgba(56, 189, 248, 0.8);
+    transform: scale(1.05);
+}
+
+.download-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 1);
+}
+
 /* ===== HAMBURGER MENU BUTTON ===== */
 .menu-toggle {
     display: none;
     cursor: pointer;
-    font-size: 1.6rem; /* Slightly smaller */
+    font-size: 1.6rem;
     color: #4ade80;
     position: relative;
     right: 0;
@@ -191,7 +229,7 @@ body {
 
 .menu-toggle .bar {
     display: block;
-    width: 22px; /* Adjusted bar width */
+    width: 22px;
     height: 3px;
     background: #4ade80;
     margin: 4px auto;
@@ -212,11 +250,11 @@ body {
 /* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 768px) {
     .navbar {
-        padding: 8px 14px; /* Compact padding */
+        padding: 8px 14px;
     }
 
     .navbar-logo img {
-        width: 65px; /* Adjusted logo size */
+        width: 65px;
     }
 
     .menu-toggle {
@@ -254,11 +292,13 @@ body {
 
     .nav-links a {
         font-size: 1.1rem;
-        padding: 10px 12px;
+        padding: 12px;
         width: 100%;
         text-align: center;
         border-top: 1px solid rgba(56, 189, 248, 0.4);
         transition: background 0.3s ease;
+        height: auto;
+        line-height: normal;
     }
 
     .nav-links a:hover {
@@ -269,7 +309,16 @@ body {
     .nav-links a::after {
         display: none;
     }
+
+    .download-btn {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        padding: 14px 36px;
+        height: auto;
+    }
 }
+
+
 
 /* ================= HERO SECTION ================= */
 .hero {
