@@ -265,6 +265,7 @@ body {
         right: 16px;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 1000; /* Ensures it's above other elements */
     }
 
     .nav-links {
@@ -280,6 +281,7 @@ body {
         align-items: center;
         transform: translateY(-100%);
         transition: transform 0.4s ease-in-out;
+        z-index: 999; /* Keeps nav menu above other content */
     }
 
     .nav-links.active {
@@ -310,13 +312,21 @@ body {
         display: none;
     }
 
+    /* Adjusting Download Button for Mobile */
     .download-btn {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-top: 20px;
-        padding: 14px 36px;
-        height: auto;
+        padding: 12px 30px;
+    }
+
+    @media (max-width: 480px) {
+        .download-btn {
+            font-size: 0.9rem;
+            padding: 10px 24px;
+        }
     }
 }
+
 
 
 
