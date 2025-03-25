@@ -686,11 +686,22 @@ body {
     margin: 0 auto;
     padding: 25px 0;
     overflow-x: auto;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    scroll-snap-type: x mandatory;
 }
 
 .scroll-wrapper::-webkit-scrollbar {
-    display: none;
+    height: 5px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /* Scroll Container */
@@ -700,9 +711,10 @@ body {
     width: max-content;
     overflow: hidden;
     position: relative;
+    gap: 30px;
 }
 
-/* Scroll Content with Animation */
+/* Scroll Content */
 .scroll-content {
     display: flex;
     gap: 30px;
@@ -717,11 +729,10 @@ body {
     to { transform: translateX(-50%); }
 }
 
-/* Slower Animation on Mobile */
+/* Disable animation on mobile for manual scroll */
 @media (max-width: 768px) {
-    @keyframes scrollAnimation {
-        from { transform: translateX(0); }
-        to { transform: translateX(-80%); }
+    .scroll-content {
+        animation: none;
     }
 }
 
@@ -741,6 +752,7 @@ body {
     flex-shrink: 0;
     transition: all 0.4s ease-in-out;
     border: 1px solid rgba(79, 195, 247, 0.2);
+    scroll-snap-align: center;
 }
 
 .skill-item:hover {
@@ -855,6 +867,7 @@ body {
         display: flex;
     }
 }
+
 
 
 /* ================= PROJECTS SECTION ================= */
