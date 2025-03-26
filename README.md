@@ -52,14 +52,6 @@ I specialize in:
 🔹 **Tech Stack**: Python, Pandas, NLTK, Scikit-learn, Matplotlib  
 🔹 **Description**: NLP-based sentiment analysis on Twitter data.  
 
-### 🎮 [Strategic Multiplayer Game](#) *(Work in Progress 🚧)*  
-🔹 **Tech Stack**: Vue.js, JavaScript, WebSocket, Node.js  
-🔹 **Description**: Real-time multiplayer platform featuring Chess, Tic-Tac-Toe, and Connect 4.  
-
-### 🛡️ [AI Intrusion Detection](#) *(Work in Progress 🚧)*  
-🔹 **Tech Stack**: Machine Learning, Cybersecurity  
-🔹 **Description**: AI-based anomaly detection for cybersecurity threats.  
-
 ---
 
 ## 🏆 Achievements  
