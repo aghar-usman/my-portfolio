@@ -63,7 +63,7 @@ I specialize in:
 
 ## 📬 Contact Me  
 
-📧 **Email**: [aghar.usman@example.com](mailto:aghar.usman@example.com)  
+📧 **Email**: [agharusman529@gmail.com](mailto:agharusman529@gmail.com)  
 🔗 **LinkedIn**: [linkedin.com/in/aghar-usman](https://linkedin.com/in/aghar-usman)  
 📂 **GitHub**: [github.com/aghar-usman](https://github.com/aghar-usman)  
 🌍 **Portfolio**: [aghar-usman.github.io/my-portfolio](https://aghar-usman.github.io/my-portfolio/)  
