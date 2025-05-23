@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         2: { 
             title: "Team Thai", 
             description: `
-                <p><strong>📅 Internship Duration:</strong> Feb 2025 - Present</p>
+                <p><strong>📅 Internship Duration:</strong> Feb 2025 - May 2025</p>
                 <p><strong>💼 Role:</strong> AI Intern</p>
-                <p>Working as an AI Intern, contributing to cutting-edge projects in artificial intelligence, 
-                   machine learning, and automation. Gaining hands-on experience in developing AI-driven applications.</p>
+                <p>Working as an AI Intern, Developed an AI-powered internal support chatbot to automate employee queries using natural language.
+                Improved response times and streamlined access to company data through a secure, scalable system.</p>
             `,
             website: "https://www.teamthai.in/" // 🔗 Official website
         }
