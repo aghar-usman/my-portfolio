@@ -10,16 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Experience Data with Official Website URLs
     const experienceData = {
-        1: { 
-            title: "Malnad College of Engineering", 
-            description: `
-                <p><strong>📅 Years Attended:</strong> 2021 - 2025</p>
-                <p><strong>🎓 Bachelor's Degree:</strong> Information Science & Engineering</p>
-                <p>Currently pursuing my undergraduate studies, specializing in Information Science & Engineering. 
-                   Passionate about AI, data science, and software development.</p>
-            `,
-            website: "https://www.mcehassan.ac.in/" // 🔗 Official website
-        },
         2: { 
             title: "Team Thai", 
             description: `
