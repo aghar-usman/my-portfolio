@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             description: `
                 <p><strong>📅 Internship Duration:</strong> Feb 2025 - May 2025</p>
                 <p><strong>💼 Role:</strong> AI Intern</p>
-                <p>Working as an AI Intern, Developed an AI-powered internal support chatbot to automate employee queries using natural language.
-                Improved response times and streamlined access to company data through a secure, scalable system.</p>
+                <p>Integrating AI with Web Interface, Handling User Queries, Natural Language Processing (NLP), Deploying AI Chatbots, Database Management with MSSQL.</p>
             `,
             website: "https://www.teamthai.in/" // 🔗 Official website
         }
@@ -111,3 +110,4 @@ document.addEventListener("DOMContentLoaded", () => {
         activePlanet = null; // Reset active planet
     }
 });
+
