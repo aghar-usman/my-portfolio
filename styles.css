@@ -516,188 +516,130 @@ body {
 }
 
 /* ================= CYBERPUNK ABOUT SECTION ================= */
-.about {
-    background: radial-gradient(circle, rgb(10, 15, 40) 10%, rgb(5, 5, 20) 90%);
-    padding: 100px 8%;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    max-width: 1200px; /* Constrain width on larger screens */
-    margin: auto; /* Center the section */
-    border-radius: 10px; /* Subtle rounding for a premium feel */
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Background Overlay - Digital Circuit Effect */
-.about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/circuitboard.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.1;
-    filter: brightness(15%) blur(1.5px);
-    animation: circuitFlow 10s linear infinite alternate;
-    z-index: -1;
+.about-image-wrapper {
+    flex-shrink: 0;
 }
 
-/* Profile Image */
+/* Hexagon Frame */
+.hex-frame {
+    width: 220px;
+    height: 220px;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    background: linear-gradient(135deg, #4ade80, #38bdf8);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulseGlow 3s infinite alternate;
+    filter: drop-shadow(0 0 18px #4ade80) drop-shadow(0 0 30px #38bdf8);
+}
+
 .about-image {
     width: 100%;
-    max-width: 250px; /* Balanced size for both desktop and mobile */
-    display: block;
-    margin: 0 auto 40px;
-    border-radius: 50%;
-    border: 3px solid #4ade80; /* Neon Green */
-    box-shadow: 0 0 30px #4ade80, 0 0 50px #38bdf8; /* Neon Glow Effect */
-    animation: float 4s ease-in-out infinite, pulseGlow 3s infinite alternate;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    animation: float 4s ease-in-out infinite;
+    margin: 0;
 }
 
+/* Override old image styles */
 .about-image:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 40px #38bdf8, 0 0 70px #4ade80;
+    transform: scale(1.05);
+    box-shadow: none;
 }
 
-/* Section Title */
-.about h2 {
-    color: #4ade80; /* Neon Green */
-    font-size: 3.2rem; /* Balanced size */
-    margin-bottom: 20px;
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 0 0 12px #4ade80, 0 0 25px #38bdf8;
-    animation: neonFlicker 3s infinite alternate;
+/* About Text */
+.about-text {
+    flex: 1;
 }
 
-/* About Description */
-.about p {
-    color: #cbd5e1;
-    font-size: 1.3rem;
-    line-height: 2;
-    max-width: 750px;
-    margin: 0 auto 40px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.about-text h2 {
+    text-align: left;
+    font-size: 2.6rem;
+    margin-bottom: 16px;
 }
 
-/* Call to Action Button */
-.about .cta-button {
-    display: inline-block;
-    background: linear-gradient(135deg, #4ade80, #38bdf8); /* Neon Green to Sky Blue */
-    color: #000;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
+.about-text p {
+    text-align: left;
     font-size: 1.1rem;
-    box-shadow: 0 0 20px #4ade80, 0 0 40px #38bdf8;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    line-height: 1.9;
+    margin-bottom: 16px;
+    max-width: 100%;
 }
 
-.about .cta-button:hover {
-    transform: translateY(-5px) scale(1.1);
-    background: linear-gradient(135deg, #38bdf8, #4ade80);
-    box-shadow: 0 0 30px #38bdf8, 0 0 60px #4ade80;
+/* Tags */
+.about-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-/* ================= CYBERPUNK ANIMATIONS ================= */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+.tag {
+    background: rgba(74, 222, 128, 0.08);
+    border: 1px solid #4ade80;
+    color: #4ade80;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.3);
+    transition: all 0.3s ease;
 }
 
-@keyframes pulseGlow {
-    0% { box-shadow: 0 0 30px #4ade80, 0 0 50px #38bdf8; }
-    100% { box-shadow: 0 0 50px #38bdf8, 0 0 80px #4ade80; }
+.tag:hover {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: #38bdf8;
+    color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
 }
 
-@keyframes neonFlicker {
-    0%, 100% { text-shadow: 0 0 10px #4ade80, 0 0 30px #38bdf8; }
-    50% { text-shadow: 0 0 20px #38bdf8, 0 0 50px #4ade80; }
-}
-
-@keyframes circuitFlow {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-20px); }
-}
-
-/* ================= RESPONSIVE DESIGN ================= */
-
-/* Tablet View */
-@media (max-width: 1024px) {
-    .about {
-        padding: 80px 5%;
-    }
-
-    .about h2 {
-        font-size: 3rem;
-    }
-
-    .about p {
-        font-size: 1.2rem;
-        max-width: 700px;
-    }
-
-    .about .cta-button {
-        padding: 10px 26px;
-    }
-
-    .about-image {
-        max-width: 220px;
-    }
-}
-
-/* Mobile View */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .about {
-        padding: 70px 6%;
+    .about-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 36px;
     }
 
-    .about h2 {
-        font-size: 2.8rem;
+    .about-text h2,
+    .about-text p {
+        text-align: center;
     }
 
-    .about p {
-        font-size: 1.2rem;
+    .about-tags {
+        justify-content: center;
     }
 
-    .about .cta-button {
-        padding: 12px 28px;
-        font-size: 1.1rem;
-    }
-
-    .about-image {
-        max-width: 230px;
+    .hex-frame {
+        width: 180px;
+        height: 180px;
     }
 }
 
-/* Small Mobile View */
 @media (max-width: 480px) {
-    .about {
-        padding: 60px 5%;
+    .hex-frame {
+        width: 150px;
+        height: 150px;
     }
 
-    .about h2 {
-        font-size: 2.5rem;
-    }
-
-    .about p {
-        font-size: 1.1rem;
-    }
-
-    .about .cta-button {
-        padding: 10px 24px;
-        font-size: 1rem;
-    }
-
-    .about-image {
-        max-width: 200px;
+    .about-text h2 {
+        font-size: 2rem;
     }
 }
 
